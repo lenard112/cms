@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Sept 19, 2014 kell 10:10 PL
+-- Loomise aeg: Sept 20, 2014 kell 01:04 EL
 -- Serveri versioon: 5.6.20
 -- PHP versioon: 5.5.15
 
@@ -31,14 +31,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_assets` (
   `name` varchar(50) NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_assets`
 --
 
 INSERT INTO `nsmiv_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 123, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 0, 125, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
@@ -55,27 +55,27 @@ INSERT INTO `nsmiv_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (15, 1, 33, 34, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
 (16, 1, 35, 36, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (17, 1, 37, 38, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 39, 84, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 85, 88, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 89, 90, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 91, 92, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 93, 94, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 95, 96, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 97, 100, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(25, 1, 101, 104, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(26, 1, 105, 106, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(18, 1, 39, 86, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 87, 90, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 91, 92, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 93, 94, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 95, 96, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 97, 98, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 99, 102, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(25, 1, 103, 106, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(26, 1, 107, 108, 1, 'com_wrapper', 'com_wrapper', '{}'),
 (27, 8, 18, 19, 2, 'com_content.category.2', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 86, 87, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(31, 25, 102, 103, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 98, 99, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 107, 108, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 109, 110, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(35, 1, 111, 112, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(36, 1, 113, 114, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 115, 116, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 117, 118, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(30, 19, 88, 89, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(31, 25, 104, 105, 2, 'com_weblinks.category.6', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 100, 101, 1, 'com_users.category.7', 'Uncategorised', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 109, 110, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 111, 112, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(35, 1, 113, 114, 1, 'com_tags', 'com_tags', '{"core.admin":[],"core.manage":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(36, 1, 115, 116, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 117, 118, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 119, 120, 1, 'com_postinstall', 'com_postinstall', '{}'),
 (39, 18, 40, 41, 2, 'com_modules.module.1', 'Main Menu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (40, 18, 42, 43, 2, 'com_modules.module.2', 'Login', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (41, 18, 44, 45, 2, 'com_modules.module.3', 'Popular Articles', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
@@ -87,19 +87,20 @@ INSERT INTO `nsmiv_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (47, 18, 56, 57, 2, 'com_modules.module.13', 'Admin Submenu', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (48, 18, 58, 59, 2, 'com_modules.module.14', 'User Status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (49, 18, 60, 61, 2, 'com_modules.module.15', 'Title', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(50, 18, 62, 63, 2, 'com_modules.module.16', 'Login Form', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(50, 18, 62, 63, 2, 'com_modules.module.16', 'Login Form', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}'),
 (51, 18, 64, 65, 2, 'com_modules.module.17', 'Breadcrumbs', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (52, 18, 66, 67, 2, 'com_modules.module.79', 'Multilanguage status', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (53, 18, 68, 69, 2, 'com_modules.module.86', 'Joomla Version', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(54, 1, 119, 120, 1, 'com_virtuemart', 'virtuemart', '{}'),
-(55, 1, 121, 122, 1, 'com_virtuemart_allinone', 'virtuemart_allinone', '{}'),
+(54, 1, 121, 122, 1, 'com_virtuemart', 'virtuemart', '{}'),
+(55, 1, 123, 124, 1, 'com_virtuemart_allinone', 'virtuemart_allinone', '{}'),
 (56, 18, 70, 71, 2, 'com_modules.module.87', 'VM - Administrator Module', ''),
 (57, 18, 72, 73, 2, 'com_modules.module.88', 'VM - Currencies Selector', ''),
 (58, 18, 74, 75, 2, 'com_modules.module.89', 'VM - Featured products', ''),
 (59, 18, 76, 77, 2, 'com_modules.module.90', 'VM - Search in Shop', ''),
 (60, 18, 78, 79, 2, 'com_modules.module.91', 'VM - Manufacturer', ''),
 (61, 18, 80, 81, 2, 'com_modules.module.92', 'VM - Shopping cart', ''),
-(62, 18, 82, 83, 2, 'com_modules.module.93', 'VM - Category', '');
+(62, 18, 82, 83, 2, 'com_modules.module.93', 'VM - Category', ''),
+(63, 18, 84, 85, 2, 'com_modules.module.94', 'topmenu', '{"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1}}');
 
 -- --------------------------------------------------------
 
@@ -457,7 +458,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_extensions` (
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `ordering` int(11) DEFAULT '0',
   `state` int(11) DEFAULT '0'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10026 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10031 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_extensions`
@@ -474,7 +475,7 @@ INSERT INTO `nsmiv_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (8, 'com_contact', 'component', 'com_contact', '', 1, 1, 1, 0, '{"name":"com_contact","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONTACT_XML_DESCRIPTION","group":""}', '{"show_contact_category":"hide","save_history":"1","history_limit":10,"show_contact_list":"0","presentation_style":"sliders","show_name":"1","show_position":"1","show_email":"0","show_street_address":"1","show_suburb":"1","show_state":"1","show_postcode":"1","show_country":"1","show_telephone":"1","show_mobile":"1","show_fax":"1","show_webpage":"1","show_misc":"1","show_image":"1","image":"","allow_vcard":"0","show_articles":"0","show_profile":"0","show_links":"0","linka_name":"","linkb_name":"","linkc_name":"","linkd_name":"","linke_name":"","contact_icons":"0","icon_address":"","icon_email":"","icon_telephone":"","icon_mobile":"","icon_fax":"","icon_misc":"","show_headings":"1","show_position_headings":"1","show_email_headings":"0","show_telephone_headings":"1","show_mobile_headings":"0","show_fax_headings":"0","allow_vcard_headings":"0","show_suburb_headings":"1","show_state_headings":"1","show_country_headings":"1","show_email_form":"1","show_email_copy":"1","banned_email":"","banned_subject":"","banned_text":"","validate_session":"1","custom_reply":"0","redirect":"","show_category_crumb":"0","metakey":"","metadesc":"","robots":"","author":"","rights":"","xreference":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (9, 'com_cpanel', 'component', 'com_cpanel', '', 1, 1, 1, 1, '{"name":"com_cpanel","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CPANEL_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10, 'com_installer', 'component', 'com_installer', '', 1, 1, 1, 1, '{"name":"com_installer","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_INSTALLER_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(11, 'com_languages', 'component', 'com_languages', '', 1, 1, 1, 1, '{"name":"com_languages","type":"component","creationDate":"2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_LANGUAGES_XML_DESCRIPTION","group":""}', '{"administrator":"en-GB","site":"en-GB"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(11, 'com_languages', 'component', 'com_languages', '', 1, 1, 1, 1, '{"name":"com_languages","type":"component","creationDate":"2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_LANGUAGES_XML_DESCRIPTION","group":""}', '{"administrator":"en-GB","site":"et-EE"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (12, 'com_login', 'component', 'com_login', '', 1, 1, 1, 1, '{"name":"com_login","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_LOGIN_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (13, 'com_media', 'component', 'com_media', '', 1, 1, 0, 1, '{"name":"com_media","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_MEDIA_XML_DESCRIPTION","group":""}', '{"upload_extensions":"bmp,csv,doc,gif,ico,jpg,jpeg,odg,odp,ods,odt,pdf,png,ppt,swf,txt,xcf,xls,BMP,CSV,DOC,GIF,ICO,JPG,JPEG,ODG,ODP,ODS,ODT,PDF,PNG,PPT,SWF,TXT,XCF,XLS","upload_maxsize":"10","file_path":"images","image_path":"images","restrict_uploads":"1","allowed_media_usergroup":"3","check_mime":"1","image_extensions":"bmp,gif,jpg,png","ignore_extensions":"","upload_mime":"image\\/jpeg,image\\/gif,image\\/png,image\\/bmp,application\\/x-shockwave-flash,application\\/msword,application\\/excel,application\\/pdf,application\\/powerpoint,text\\/plain,application\\/x-zip","upload_mime_illegal":"text\\/html"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (14, 'com_menus', 'component', 'com_menus', '', 1, 1, 1, 1, '{"name":"com_menus","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_MENUS_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -486,7 +487,7 @@ INSERT INTO `nsmiv_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (20, 'com_templates', 'component', 'com_templates', '', 1, 1, 1, 1, '{"name":"com_templates","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_TEMPLATES_XML_DESCRIPTION","group":""}', '{"template_positions_display":"0","upload_limit":"2","image_formats":"gif,bmp,jpg,jpeg,png","source_formats":"txt,less,ini,xml,js,php,css","font_formats":"woff,ttf,otf","compressed_formats":"zip"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (21, 'com_weblinks', 'component', 'com_weblinks', '', 1, 1, 1, 0, '{"name":"com_weblinks","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_WEBLINKS_XML_DESCRIPTION","group":""}', '{"target":"0","save_history":"1","history_limit":5,"count_clicks":"1","icons":1,"link_icons":"","float_first":"right","float_second":"right","show_tags":"1","category_layout":"_:default","show_category_title":"1","show_description":"1","show_description_image":"1","maxLevel":"-1","show_empty_categories":"0","show_subcat_desc":"1","show_cat_num_links":"1","show_cat_tags":"1","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_links_cat":"1","filter_field":"1","show_pagination_limit":"1","show_headings":"0","show_link_description":"1","show_link_hits":"1","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (22, 'com_content', 'component', 'com_content', '', 1, 1, 0, 1, '{"name":"com_content","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONTENT_XML_DESCRIPTION","group":""}', '{"article_layout":"_:default","show_title":"1","link_titles":"1","show_intro":"1","show_category":"1","link_category":"1","show_parent_category":"0","link_parent_category":"0","show_author":"1","link_author":"0","show_create_date":"0","show_modify_date":"0","show_publish_date":"1","show_item_navigation":"1","show_vote":"0","show_readmore":"1","show_readmore_title":"1","readmore_limit":"100","show_icons":"1","show_print_icon":"1","show_email_icon":"1","show_hits":"1","show_noauth":"0","show_publishing_options":"1","show_article_options":"1","save_history":"1","history_limit":10,"show_urls_images_frontend":"0","show_urls_images_backend":"1","targeta":0,"targetb":0,"targetc":0,"float_intro":"left","float_fulltext":"left","category_layout":"_:blog","show_category_title":"0","show_description":"0","show_description_image":"0","maxLevel":"1","show_empty_categories":"0","show_no_articles":"1","show_subcat_desc":"1","show_cat_num_articles":"0","show_base_description":"1","maxLevelcat":"-1","show_empty_categories_cat":"0","show_subcat_desc_cat":"1","show_cat_num_articles_cat":"1","num_leading_articles":"1","num_intro_articles":"4","num_columns":"2","num_links":"4","multi_column_order":"0","show_subcategory_content":"0","show_pagination_limit":"1","filter_field":"hide","show_headings":"1","list_show_date":"0","date_format":"","list_show_hits":"1","list_show_author":"1","orderby_pri":"order","orderby_sec":"rdate","order_date":"published","show_pagination":"2","show_pagination_results":"1","show_feed_link":"1","feed_summary":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(23, 'com_config', 'component', 'com_config', '', 1, 1, 0, 1, '{"name":"com_config","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONFIG_XML_DESCRIPTION","group":""}', '{"filters":{"1":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"6":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"7":{"filter_type":"NONE","filter_tags":"","filter_attributes":""},"2":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"3":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"4":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"5":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"10":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"12":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"8":{"filter_type":"NONE","filter_tags":"","filter_attributes":""}}}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(23, 'com_config', 'component', 'com_config', '', 1, 1, 0, 1, '{"name":"com_config","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_CONFIG_XML_DESCRIPTION","group":""}', '{"filters":{"1":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"9":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"6":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"7":{"filter_type":"NONE","filter_tags":"","filter_attributes":""},"2":{"filter_type":"NH","filter_tags":"","filter_attributes":""},"3":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"4":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"5":{"filter_type":"BL","filter_tags":"","filter_attributes":""},"8":{"filter_type":"NONE","filter_tags":"","filter_attributes":""}}}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (24, 'com_redirect', 'component', 'com_redirect', '', 1, 1, 0, 1, '{"name":"com_redirect","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_REDIRECT_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (25, 'com_users', 'component', 'com_users', '', 1, 1, 0, 1, '{"name":"com_users","type":"component","creationDate":"April 2006","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_USERS_XML_DESCRIPTION","group":""}', '{"allowUserRegistration":"1","new_usertype":"2","guest_usergroup":"9","sendpassword":"1","useractivation":"1","mail_to_admin":"0","captcha":"","frontend_userparams":"1","site_language":"0","change_login_name":"0","reset_count":"10","reset_time":"1","minimum_length":"4","minimum_integers":"0","minimum_symbols":"0","minimum_uppercase":"0","save_history":"1","history_limit":5,"mailSubjectPrefix":"","mailBodySuffix":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (27, 'com_finder', 'component', 'com_finder', '', 1, 1, 0, 0, '{"name":"com_finder","type":"component","creationDate":"August 2011","author":"Joomla! Project","copyright":"(C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"COM_FINDER_XML_DESCRIPTION","group":""}', '{"show_description":"1","description_length":255,"allow_empty_query":"0","show_url":"1","show_advanced":"1","expand_advanced":"0","show_date_filters":"0","highlight_terms":"1","opensearch_name":"","opensearch_description":"","batch_size":"50","memory_table_limit":30000,"title_multiplier":"1.7","text_multiplier":"0.7","meta_multiplier":"1.2","path_multiplier":"2.0","misc_multiplier":"0.3","stemmer":"snowball"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -498,7 +499,7 @@ INSERT INTO `nsmiv_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (100, 'PHPMailer', 'library', 'phpmailer', '', 0, 1, 1, 1, '{"name":"PHPMailer","type":"library","creationDate":"2001","author":"PHPMailer","copyright":"(c) 2001-2003, Brent R. Matzelle, (c) 2004-2009, Andy Prevost. All Rights Reserved., (c) 2010-2013, Jim Jagielski. All Rights Reserved.","authorEmail":"jimjag@gmail.com","authorUrl":"https:\\/\\/github.com\\/PHPMailer\\/PHPMailer","version":"5.2.6","description":"LIB_PHPMAILER_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (101, 'SimplePie', 'library', 'simplepie', '', 0, 1, 1, 1, '{"name":"SimplePie","type":"library","creationDate":"2004","author":"SimplePie","copyright":"Copyright (c) 2004-2009, Ryan Parman and Geoffrey Sneddon","authorEmail":"","authorUrl":"http:\\/\\/simplepie.org\\/","version":"1.2","description":"LIB_SIMPLEPIE_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 'phputf8', 'library', 'phputf8', '', 0, 1, 1, 1, '{"name":"phputf8","type":"library","creationDate":"2006","author":"Harry Fuecks","copyright":"Copyright various authors","authorEmail":"hfuecks@gmail.com","authorUrl":"http:\\/\\/sourceforge.net\\/projects\\/phputf8","version":"0.5","description":"LIB_PHPUTF8_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":""}', '{"mediaversion":"cf2527551238c37b9da6b970a27ad70c"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 'Joomla! Platform', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"Joomla! Platform","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"http:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":""}', '{"mediaversion":"c58f13fffcee7bddd80d6edef1e08557"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 'IDNA Convert', 'library', 'idna_convert', '', 0, 1, 1, 1, '{"name":"IDNA Convert","type":"library","creationDate":"2004","author":"phlyLabs","copyright":"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de","authorEmail":"phlymail@phlylabs.de","authorUrl":"http:\\/\\/phlylabs.de","version":"0.8.0","description":"LIB_IDNA_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{"name":"FOF","type":"library","creationDate":"2014-03-09 12:54:48","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2014 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"2.2.1","description":"LIB_FOF_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 'PHPass', 'library', 'phpass', '', 0, 1, 1, 1, '{"name":"PHPass","type":"library","creationDate":"2004-2006","author":"Solar Designer","copyright":"","authorEmail":"solar@openwall.com","authorUrl":"http:\\/\\/www.openwall.com\\/phpass\\/","version":"0.3","description":"LIB_PHPASS_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -627,7 +628,11 @@ INSERT INTO `nsmiv_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 (10022, 'mod_virtuemart_search', 'module', 'mod_virtuemart_search', '', 0, 1, 1, 0, '{"name":"mod_virtuemart_search","type":"module","creationDate":"January 09 2013","author":"The VirtueMart Development Team","copyright":"Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.","authorEmail":"","authorUrl":"http:\\/\\/www.virtuemart.net","version":"2.9.10","description":"MOD_VIRTUEMART_SEARCH_DESC","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 (10023, 'mod_virtuemart_manufacturer', 'module', 'mod_virtuemart_manufacturer', '', 0, 1, 1, 0, '{"name":"mod_virtuemart_manufacturer","type":"module","creationDate":"September 04 2014","author":"The VirtueMart Development Team","copyright":"Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.","authorEmail":"","authorUrl":"http:\\/\\/www.virtuemart.net","version":"2.9.9b","description":"MOD_VIRTUEMART_MANUFACTURER_DESC","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 8, 0),
 (10024, 'mod_virtuemart_cart', 'module', 'mod_virtuemart_cart', '', 0, 1, 1, 0, '{"name":"mod_virtuemart_cart","type":"module","creationDate":"September 04 2014","author":"The VirtueMart Development Team","copyright":"Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.","authorEmail":"","authorUrl":"http:\\/\\/www.virtuemart.net","version":"2.9.9b","description":"MOD_VIRTUEMART_CART_DESC","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10025, 'mod_virtuemart_category', 'module', 'mod_virtuemart_category', '', 0, 1, 1, 0, '{"name":"mod_virtuemart_category","type":"module","creationDate":"September 04 2014","author":"The VirtueMart Development Team","copyright":"Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.","authorEmail":"","authorUrl":"http:\\/\\/www.virtuemart.net","version":"2.9.9b","description":"MOD_VIRTUEMART_CATEGORY_DESC","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 4, 0);
+(10025, 'mod_virtuemart_category', 'module', 'mod_virtuemart_category', '', 0, 1, 1, 0, '{"name":"mod_virtuemart_category","type":"module","creationDate":"September 04 2014","author":"The VirtueMart Development Team","copyright":"Copyright (C) 2004-2014 Virtuemart Team. All rights reserved.","authorEmail":"","authorUrl":"http:\\/\\/www.virtuemart.net","version":"2.9.9b","description":"MOD_VIRTUEMART_CATEGORY_DESC","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 4, 0),
+(10027, 'Estonianet', 'language', 'et-EE', '', 0, 1, 0, 0, '{"name":"Estonian (et)","type":"language","creationDate":"2014-07-02","author":"Rivo Z\\u00e4ngov","copyright":"Copyright (C) 2005 - 2014 eraser.ee and Open Source Matters. K\\u00f5ik \\u00f5igused kaitstud.","authorEmail":"eraser@eraser.ee","authorUrl":"www.eraser.ee","version":"3.3.1.2","description":"Estonian language pack for Joomla! 3.3","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10028, 'Estonianet', 'language', 'et-EE', '', 1, 1, 0, 0, '{"name":"Estonian (et)","type":"language","creationDate":"2014-07-01","author":"Rivo Z\\u00e4ngov","copyright":"Copyright (C) 2005 - 2014 Rivo Z\\u00e4ngov ja Open Source Matters. K\\u00f5ik \\u00f5igused kaitstud.","authorEmail":"eraser@eraser.ee","authorUrl":"www.eraser.ee","version":"3.3.1.2","description":"Estonian language pack for Joomla! 3.3","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10029, 'et-EE', 'package', 'pkg_et-EE', '', 0, 1, 1, 0, '{"name":"Estonian Language Pack","type":"package","creationDate":"2. juuli 2014","author":"Rivo Z\\u00e4ngov","copyright":"Copyright (C) 2005 - 2014 eraser.ee Open Source Matters.","authorEmail":"eraser@eraser.ee","authorUrl":"www.eraser.ee","version":"3.3.1.2","description":"Eestikeele pakk Joomla! et-EE versioon 3.3.1 versioon 2","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10030, 'com_virtuemart - et-EE', 'file', 'com_virtuemart-et-EE', '', 0, 1, 0, 0, '{"name":"com_virtuemart - et-EE","type":"file","creationDate":"19.09.2014","author":"VirtueMart language team","copyright":"\\u00a9 2008-2014 - compojoom-com. All rights reserved!","authorEmail":"max@virtuemart.net","authorUrl":"https:\\/\\/virtuemart.net","version":"2014-09-19-03-45-23","description":"\\n        This package was auto generated with CTransifex(https:\\/\\/compojoom.com). We''ve grabbed the latest language files for our extension from transifex.com.\\n        Special thanks to our translation team at (https:\\/\\/www.transifex.com\\/projects\\/p\\/virtuemart\\/) for helping with this VirtueMart translation!\\n    ","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1190,14 +1195,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_menu` (
   `home` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=115 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=121 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_menu`
 --
 
 INSERT INTO `nsmiv_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 75, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 87, 0, '*', 0),
 (2, 'menu', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 0, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'menu', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 0, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'menu', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 0, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -1221,7 +1226,7 @@ INSERT INTO `nsmiv_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (22, 'menu', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 28, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 41, 42, 0, '*', 1),
 (23, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 0, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 43, 44, 0, '', 1),
 (24, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 0, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 45, 46, 0, '*', 1),
-(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"featured_categories":[""],"layout_type":"blog","num_leading_articles":"1","num_intro_articles":"3","num_columns":"3","num_links":"0","multi_column_order":"1","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":1,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 1, '*', 0),
+(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 0, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"featured_categories":[""],"layout_type":"blog","num_leading_articles":"1","num_intro_articles":"3","num_columns":"3","num_links":"0","multi_column_order":"1","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"","link_titles":"","show_intro":"","info_block_position":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_vote":"","show_readmore":"","show_readmore_title":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_hits":"","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":1,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 47, 48, 0, '*', 0),
 (102, 'main', 'COM_VIRTUEMART', 'com-virtuemart', '', 'com-virtuemart', 'index.php?option=com_virtuemart', 'component', 0, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '../components/com_virtuemart/assets/images/vmgeneral/menu_icon.png', 0, '', 49, 72, 0, '*', 1),
 (103, 'main', 'COM_VIRTUEMART_MENU_CATEGORIES', 'com-virtuemart-menu-categories', '', 'com-virtuemart/com-virtuemart-menu-categories', 'index.php?option=com_virtuemart&view=category', 'component', 0, 102, 2, 10000, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_virtuemart/assets/images/icon_16/menu-icon16-categories.png', 0, '', 50, 51, 0, '*', 1),
 (104, 'main', 'COM_VIRTUEMART_MENU_PRODUCTS', 'com-virtuemart-menu-products', '', 'com-virtuemart/com-virtuemart-menu-products', 'index.php?option=com_virtuemart&view=product', 'component', 0, 102, 2, 10000, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_virtuemart/assets/images/icon_16/menu-icon16-products.png', 0, '', 52, 53, 0, '*', 1),
@@ -1234,7 +1239,13 @@ INSERT INTO `nsmiv_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (111, 'main', 'COM_VIRTUEMART_MENU_SHIPMENTMETHODS', 'com-virtuemart-menu-shipmentmethods', '', 'com-virtuemart/com-virtuemart-menu-shipmentmethods', 'index.php?option=com_virtuemart&view=shipmentmethod', 'component', 0, 102, 2, 10000, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_virtuemart/assets/images/icon_16/menu-icon16-shipmentmethods.png', 0, '', 66, 67, 0, '*', 1),
 (112, 'main', 'COM_VIRTUEMART_MENU_PAYMENTMETHODS', 'com-virtuemart-menu-paymentmethods', '', 'com-virtuemart/com-virtuemart-menu-paymentmethods', 'index.php?option=com_virtuemart&view=paymentmethod', 'component', 0, 102, 2, 10000, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_virtuemart/assets/images/icon_16/menu-icon16-paymentmethods.png', 0, '', 68, 69, 0, '*', 1),
 (113, 'main', 'COM_VIRTUEMART_MENU_CONFIGURATION', 'com-virtuemart-menu-configuration', '', 'com-virtuemart/com-virtuemart-menu-configuration', 'index.php?option=com_virtuemart&view=config', 'component', 0, 102, 2, 10000, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_virtuemart/assets/images/icon_16/menu-icon16-config.png', 0, '', 70, 71, 0, '*', 1),
-(114, 'main', 'VirtueMart AIO', 'virtuemart-aio', '', 'virtuemart-aio', 'index.php?option=com_virtuemart_allinone', 'component', 0, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 73, 74, 0, '', 1);
+(114, 'main', 'VirtueMart AIO', 'virtuemart-aio', '', 'virtuemart-aio', 'index.php?option=com_virtuemart_allinone', 'component', 0, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 73, 74, 0, '', 1),
+(115, 'mainmenu', 'E-sigareti komplektid', 'e-sigareti-komplektid', '', 'e-sigareti-komplektid', 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=1&virtuemart_manufacturer_id=0&categorylayout=0&showcategory=1&showproducts=1&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 75, 76, 0, '*', 0),
+(116, 'mainmenu', 'Akud', 'akud', '', 'akud', 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=2&virtuemart_manufacturer_id=0&categorylayout=0&showcategory=1&showproducts=1&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 77, 78, 0, '*', 0),
+(117, 'mainmenu', 'Kartomiseerijad', 'kartomiseerijad', '', 'kartomiseerijad', 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=3&virtuemart_manufacturer_id=0&categorylayout=0&showcategory=1&showproducts=1&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 79, 80, 0, '*', 0),
+(118, 'mainmenu', 'Tarvikud', 'tarvikud', '', 'tarvikud', 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=4&virtuemart_manufacturer_id=0&categorylayout=0&showcategory=1&showproducts=1&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 81, 82, 0, '*', 0),
+(119, 'mainmenu', 'Allahinnatud', 'allahinnatud', '', 'allahinnatud', 'index.php?option=com_virtuemart&view=category&virtuemart_category_id=5&virtuemart_manufacturer_id=0&categorylayout=0&showcategory=1&showproducts=1&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 83, 84, 0, '*', 0),
+(120, 'topmenu', 'Avaleht', 'avaleht', '', 'avaleht', 'index.php?option=com_virtuemart&view=virtuemart&productsublayout=0', 'component', 1, 1, 1, 10000, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"page_title":"","show_page_heading":0,"page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 85, 86, 1, '*', 0);
 
 -- --------------------------------------------------------
 
@@ -1248,14 +1259,15 @@ CREATE TABLE IF NOT EXISTS `nsmiv_menu_types` (
   `menutype` varchar(24) NOT NULL,
   `title` varchar(48) NOT NULL,
   `description` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_menu_types`
 --
 
 INSERT INTO `nsmiv_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
-(1, 'mainmenu', 'Main Menu', 'The main menu for the site');
+(1, 'mainmenu', 'Main Menu', 'The main menu for the site'),
+(2, 'topmenu', 'Topmenu', '');
 
 -- --------------------------------------------------------
 
@@ -1315,14 +1327,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_modules` (
   `params` text NOT NULL,
   `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=95 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_modules`
 --
 
 INSERT INTO `nsmiv_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
-(1, 55, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{"menutype":"mainmenu","startLevel":"0","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
+(1, 39, 'Main Menu', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{"menutype":"mainmenu","base":"","startLevel":"1","endLevel":"0","showAllChildren":"0","tag_id":"","class_sfx":"","window_open":"","layout":"_:default","moduleclass_sfx":"_menu","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (2, 56, 'Login', '', '', 1, 'login', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '', 1, '*'),
 (3, 57, 'Popular Articles', '', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{"count":"5","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
 (4, 58, 'Recently Added Articles', '', '', 4, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latest', 3, 1, '{"count":"5","ordering":"c_dsc","catid":"","user_id":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","automatic_title":"1"}', 1, '*'),
@@ -1333,7 +1345,7 @@ INSERT INTO `nsmiv_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (13, 63, 'Admin Submenu', '', '', 1, 'submenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_submenu', 3, 1, '', 1, '*'),
 (14, 64, 'User Status', '', '', 2, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_status', 3, 1, '', 1, '*'),
 (15, 65, 'Title', '', '', 1, 'title', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_title', 3, 1, '', 1, '*'),
-(16, 66, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
+(16, 50, 'Login Form', '', '', 1, 'left', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '{"pretext":"","posttext":"","login":"","logout":"","greeting":"1","name":"0","usesecure":"0","usetext":"0","layout":"_:default","moduleclass_sfx":"","cache":"0","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 (17, 67, 'Breadcrumbs', '', '', 1, 'position-2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 1, '{"moduleclass_sfx":"","showHome":"1","homeText":"","showComponent":"1","separator":"","cache":"1","cache_time":"900","cachemode":"itemid"}', 0, '*'),
 (79, 68, 'Multilanguage status', '', '', 1, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_multilangstatus', 3, 1, '{"layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (86, 69, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
@@ -1343,7 +1355,8 @@ INSERT INTO `nsmiv_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (90, 59, 'VM - Search in Shop', '', '', 2, 'position-4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_virtuemart_search', 1, 1, '', 0, '*'),
 (91, 60, 'VM - Manufacturer', '', '', 8, 'position-4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_virtuemart_manufacturer', 1, 1, '', 0, '*'),
 (92, 61, 'VM - Shopping cart', '', '', 0, 'position-4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_virtuemart_cart', 1, 1, '', 0, '*'),
-(93, 62, 'VM - Category', '', '', 4, 'position-4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_virtuemart_category', 1, 1, '', 0, '*');
+(93, 62, 'VM - Category', '', '', 4, 'position-4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_virtuemart_category', 1, 1, '', 0, '*'),
+(94, 63, 'topmenu', '', '', 1, 'position-3', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 0, '{"menutype":"topmenu","base":"","startLevel":"1","endLevel":"0","showAllChildren":"1","tag_id":"","class_sfx":"","window_open":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -1385,7 +1398,8 @@ INSERT INTO `nsmiv_modules_menu` (`moduleid`, `menuid`) VALUES
 (90, 0),
 (91, 0),
 (92, 0),
-(93, 0);
+(93, 0),
+(94, 0);
 
 -- --------------------------------------------------------
 
@@ -1535,8 +1549,8 @@ CREATE TABLE IF NOT EXISTS `nsmiv_session` (
 --
 
 INSERT INTO `nsmiv_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('3i73ijf3dcik823cmka5s9eaa2', 0, 1, '1411155975', '__default|a:8:{s:15:"session.counter";i:2;s:19:"session.timer.start";i:1411154987;s:18:"session.timer.last";i:1411154987;s:17:"session.timer.now";i:1411155974;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"bf737f71eb315988f102958e8bcda434";}', 0, ''),
-('lifhvsfcm41gnds4hdtroluqj5', 1, 0, '1411156668', '__default|a:8:{s:15:"session.counter";i:17;s:19:"session.timer.start";i:1411155978;s:18:"session.timer.last";i:1411156662;s:17:"session.timer.now";i:1411156666;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":3:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_installer";O:8:"stdClass":3:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";s:12:"redirect_url";N;}s:11:"com_modules";O:8:"stdClass":1:{s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"718";s:4:"name";s:10:"Super User";s:8:"username";s:12:"lenard.latte";s:5:"email";s:11:"info@cms.ee";s:8:"password";s:60:"$2y$10$FQo37A2OKQiourDXj/xAFu.ElwCAfNRE1KAg1EdHrMV7uhJ3ANuPy";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-09-19 19:29:14";s:13:"lastvisitDate";s:19:"0000-00-00 00:00:00";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"afa719eed900725d16139e0ebeb8e358";}', 718, 'lenard.latte');
+('t1if0ve3gbi7tb7k27846m5e82', 0, 1, '1411167151', '__default|a:8:{s:15:"session.counter";i:135;s:19:"session.timer.start";i:1411164167;s:18:"session.timer.last";i:1411167099;s:17:"session.timer.now";i:1411167150;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":1:{s:14:"com_virtuemart";O:8:"stdClass":2:{s:14:"productdetails";O:8:"stdClass":2:{s:5:"limit";s:3:"int";s:10:"limitstart";i:0;}s:4:"cart";O:8:"stdClass":2:{s:5:"limit";s:3:"int";s:10:"limitstart";i:0;}}}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";b:0;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:9;}s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"077165476ed2210bc611877d1185273c";}__vm|a:4:{s:23:"vmlastvisitedcategoryid";i:1;s:23:"vmlastvisitedproductids";a:1:{i:0;i:1;}s:19:"vmlastvisitedmanuid";i:0;s:6:"vmcart";s:741:"O:8:"stdClass":24:{s:16:"cartProductsData";a:1:{i:0;a:3:{s:21:"virtuemart_product_id";i:1;s:8:"quantity";i:1;s:17:"customProductData";a:0:{}}}s:8:"vendorId";i:1;s:21:"lastVisitedCategoryId";i:0;s:28:"virtuemart_shipmentmethod_id";i:0;s:27:"virtuemart_paymentmethod_id";i:0;s:25:"automaticSelectedShipment";b:0;s:24:"automaticSelectedPayment";b:0;s:12:"order_number";N;s:2:"BT";i:0;s:2:"ST";i:0;s:10:"cartfields";N;s:10:"couponCode";s:0:"";s:20:"_triesValidateCoupon";a:0:{}s:14:"order_language";s:5:"et-EE";s:14:"pricesCurrency";i:47;s:15:"paymentCurrency";N;s:6:"_guest";i:1;s:11:"_inCheckOut";b:0;s:10:"_inConfirm";b:0;s:14:"_dataValidated";b:0;s:12:"_confirmDone";b:0;s:10:"STsameAsBT";i:1;s:15:"selected_shipto";i:0;s:9:"_fromCart";b:0;}";}', 0, ''),
+('id6hlq8ait23j8ssii1b2381l5', 1, 0, '1411167566', '__default|a:8:{s:15:"session.counter";i:235;s:19:"session.timer.start";i:1411162018;s:18:"session.timer.last";i:1411167558;s:17:"session.timer.now";i:1411167565;s:22:"session.client.browser";s:109:"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":10:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:9:"com_menus";O:8:"stdClass":2:{s:5:"items";O:8:"stdClass":3:{s:8:"menutype";s:8:"mainmenu";s:10:"limitstart";i:0;s:4:"list";a:4:{s:9:"direction";s:3:"asc";s:5:"limit";s:2:"20";s:8:"ordering";s:5:"a.lft";s:5:"start";d:0;}}s:4:"edit";O:8:"stdClass":2:{s:4:"item";O:8:"stdClass":4:{s:2:"id";a:1:{i:0;i:120;}s:4:"data";N;s:4:"type";N;s:4:"link";N;}s:4:"menu";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}}s:13:"com_installer";O:8:"stdClass":4:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";s:12:"redirect_url";N;s:6:"manage";O:8:"stdClass":4:{s:6:"filter";O:8:"stdClass":5:{s:6:"search";s:1:"m";s:9:"client_id";s:0:"";s:6:"status";s:0:"";s:4:"type";s:0:"";s:5:"group";s:0:"";}s:8:"ordercol";s:4:"name";s:9:"orderdirn";s:3:"asc";s:10:"limitstart";i:0;}}s:11:"com_modules";O:8:"stdClass":3:{s:7:"modules";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:18:"client_id_previous";i:0;}}s:4:"edit";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}s:3:"add";O:8:"stdClass":1:{s:6:"module";O:8:"stdClass":2:{s:12:"extension_id";N;s:6:"params";N;}}}s:14:"com_virtuemart";O:8:"stdClass":1:{s:7:"product";O:8:"stdClass":1:{s:16:"filter_order_Dir";s:4:"DESC";}}s:13:"com_languages";O:8:"stdClass":2:{s:9:"installed";O:8:"stdClass":2:{s:8:"ordercol";s:6:"a.name";s:10:"limitstart";s:1:"0";}s:9:"overrides";O:8:"stdClass":2:{s:6:"filter";O:8:"stdClass":2:{s:6:"client";s:1:"0";s:8:"language";s:5:"et-EE";}s:10:"limitstart";i:0;}}s:14:"com_categories";O:8:"stdClass":1:{s:10:"categories";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:9:"extension";s:11:"com_content";}}}s:9:"com_cache";O:8:"stdClass":1:{s:5:"cache";O:8:"stdClass":4:{s:6:"filter";O:8:"stdClass":1:{s:9:"client_id";i:0;}s:8:"ordercol";s:5:"group";s:9:"orderdirn";s:3:"asc";s:10:"limitstart";s:1:"0";}}s:11:"com_checkin";O:8:"stdClass":1:{s:7:"checkin";O:8:"stdClass":1:{s:8:"ordercol";s:5:"table";}}s:6:"global";O:8:"stdClass":1:{s:4:"list";O:8:"stdClass":1:{s:5:"limit";i:20;}}}}s:4:"user";O:5:"JUser":109:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";i:718;s:4:"name";s:10:"Super User";s:8:"username";s:12:"lenard.latte";s:5:"email";s:11:"info@cms.ee";s:8:"password";s:60:"$2y$10$FQo37A2OKQiourDXj/xAFu.ElwCAfNRE1KAg1EdHrMV7uhJ3ANuPy";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-09-19 19:29:14";s:13:"lastvisitDate";s:19:"2014-09-19 19:46:41";s:10:"activation";s:1:"0";s:6:"params";s:2:"{}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";s:6:"vmlang";s:5:"en-GB";s:17:"vendor_store_name";s:14:"E-sigaretipood";s:11:"vendor_name";s:14:"E-sigaretipood";s:10:"vendor_url";s:0:"";s:14:"vendor_min_pov";s:1:"1";s:15:"vendor_currency";s:2:"47";s:26:"vendor_accepted_currencies";s:2:"47";s:11:"searchMedia";s:0:"";s:15:"media_published";s:1:"1";s:10:"file_title";s:0:"";s:16:"file_description";s:0:"";s:9:"file_meta";s:0:"";s:8:"file_url";s:33:"images/stories/virtuemart/vendor/";s:14:"file_url_thumb";s:0:"";s:11:"media_roles";s:19:"file_is_displayable";s:12:"media_action";s:1:"0";s:15:"active_media_id";s:1:"0";s:6:"option";s:14:"com_virtuemart";s:17:"vendor_store_desc";s:0:"";s:23:"vendor_terms_of_service";s:8:"<p>s</p>";s:17:"vendor_legal_info";s:0:"";s:11:"customtitle";s:0:"";s:7:"metakey";s:0:"";s:8:"metadesc";s:0:"";s:9:"metarobot";s:0:"";s:10:"metaauthor";s:0:"";s:14:"user_is_vendor";s:1:"1";s:20:"virtuemart_vendor_id";s:1:"1";s:9:"last_task";s:8:"editshop";s:20:"vendor_letter_format";s:2:"A4";s:25:"vendor_letter_orientation";s:1:"P";s:24:"vendor_letter_margin_top";s:2:"55";s:27:"vendor_letter_margin_header";s:2:"20";s:25:"vendor_letter_margin_left";s:2:"25";s:26:"vendor_letter_margin_right";s:2:"25";s:27:"vendor_letter_margin_bottom";s:2:"25";s:27:"vendor_letter_margin_footer";s:2:"20";s:21:"vendor_letter_add_tos";s:1:"0";s:29:"vendor_letter_add_tos_newpage";s:1:"1";s:23:"vendor_letter_font_size";s:1:"8";s:30:"vendor_letter_header_font_size";s:1:"7";s:30:"vendor_letter_footer_font_size";s:1:"6";s:17:"vendor_letter_css";s:0:"";s:20:"vendor_letter_header";s:1:"1";s:38:"vendor_letter_header_cell_height_ratio";s:1:"1";s:25:"vendor_letter_header_line";s:1:"1";s:31:"vendor_letter_header_line_color";s:7:"#000000";s:26:"vendor_letter_header_image";s:1:"1";s:30:"vendor_letter_header_imagesize";s:2:"60";s:25:"vendor_letter_header_html";s:8:"<p>s</p>";s:20:"vendor_letter_footer";s:1:"1";s:38:"vendor_letter_footer_cell_height_ratio";s:1:"1";s:25:"vendor_letter_footer_line";s:1:"1";s:31:"vendor_letter_footer_line_color";s:7:"#000000";s:25:"vendor_letter_footer_html";s:8:"<p>s</p>";s:15:"customer_number";s:11:"LEce902975f";s:9:"password2";s:0:"";s:6:"agreed";s:1:"1";s:7:"company";s:0:"";s:5:"title";s:0:"";s:10:"first_name";s:6:"Lenard";s:11:"middle_name";s:0:"";s:9:"last_name";s:6:"Lätte";s:9:"address_1";s:11:"Võru 57a-2";s:9:"address_2";s:0:"";s:3:"zip";s:5:"50111";s:4:"city";s:5:"Tartu";s:21:"virtuemart_country_id";s:2:"67";s:19:"virtuemart_state_id";s:0:"";s:7:"phone_1";s:0:"";s:7:"phone_2";s:0:"";s:3:"fax";s:0:"";s:22:"virtuemart_userinfo_id";s:1:"1";s:12:"address_type";s:2:"BT";s:18:"virtuemart_user_id";a:1:{i:0;s:3:"718";}s:10:"contact_id";s:0:"";s:6:"layout";s:4:"edit";s:4:"task";s:5:"apply";s:10:"boxchecked";s:1:"0";s:10:"controller";s:4:"user";s:4:"view";s:4:"user";s:32:"1f9b5cf255f5abe159b61ebb91b73b13";s:1:"1";}s:13:"session.token";s:32:"64086cd4b8712cfe9f37a18c96b26e5a";}', 718, 'lenard.latte');
 
 -- --------------------------------------------------------
 
@@ -1599,7 +1613,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_template_styles` (
   `home` char(7) NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL DEFAULT '',
   `params` text NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_template_styles`
@@ -1709,7 +1723,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_updates` (
   `detailsurl` text NOT NULL,
   `infourl` text NOT NULL,
   `extra_query` varchar(1000) DEFAULT ''
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=57 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Available Updates' AUTO_INCREMENT=56 ;
 
 --
 -- Andmete tõmmistamine tabelile `nsmiv_updates`
@@ -1739,39 +1753,38 @@ INSERT INTO `nsmiv_updates` (`update_id`, `update_site_id`, `extension_id`, `nam
 (21, 3, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
 (22, 3, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
 (23, 3, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(24, 3, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.3.1.2', '', 'http://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(25, 3, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(26, 3, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.2.3.1', '', 'http://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(27, 3, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(28, 3, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(29, 3, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.2.2.1', '', 'http://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(30, 3, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
-(31, 3, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(32, 3, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(33, 3, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(34, 3, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(35, 3, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.3.3.3', '', 'http://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(36, 3, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(37, 3, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(38, 3, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(39, 3, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(40, 3, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.3.3.15', '', 'http://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(41, 3, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.3.0.1', '', 'http://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(42, 3, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(43, 3, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.0.2.1', '', 'http://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(44, 3, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(45, 3, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(46, 3, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(47, 3, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(48, 3, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(49, 3, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.3.0.2', '', 'http://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(50, 3, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(51, 3, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(52, 3, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.1', '', 'http://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(53, 3, 0, 'EnglishCA', '', 'pkg_en-CA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(54, 3, 0, 'FrenchCA', '', 'pkg_fr-CA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(55, 3, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.3.0.1', '', 'http://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
-(56, 3, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.1', '', 'http://update.joomla.org/language/details3/si-LK_details.xml', '', '');
+(24, 3, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(25, 3, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.2.3.1', '', 'http://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(26, 3, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(27, 3, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(28, 3, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.2.2.1', '', 'http://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(29, 3, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
+(30, 3, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(31, 3, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(32, 3, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(33, 3, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(34, 3, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.3.3.3', '', 'http://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(35, 3, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(36, 3, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(37, 3, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(38, 3, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(39, 3, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.3.3.15', '', 'http://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(40, 3, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.3.0.1', '', 'http://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(41, 3, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.1', '', 'http://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(42, 3, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.0.2.1', '', 'http://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(43, 3, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(44, 3, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(45, 3, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(46, 3, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(47, 3, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.1', '', 'http://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(48, 3, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.3.0.2', '', 'http://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(49, 3, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.3.2.1', '', 'http://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(50, 3, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(51, 3, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.1', '', 'http://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(52, 3, 0, 'EnglishCA', '', 'pkg_en-CA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(53, 3, 0, 'FrenchCA', '', 'pkg_fr-CA', 'package', '', 0, '3.3.3.1', '', 'http://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(54, 3, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.3.0.1', '', 'http://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(55, 3, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.1', '', 'http://update.joomla.org/language/details3/si-LK_details.xml', '', '');
 
 -- --------------------------------------------------------
 
@@ -1795,34 +1808,34 @@ CREATE TABLE IF NOT EXISTS `nsmiv_update_sites` (
 --
 
 INSERT INTO `nsmiv_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1411156005, ''),
-(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1411156005, ''),
-(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1411156005, ''),
-(4, 'VirtueMart3 Update Site', 'extension', 'http://virtuemart.net/releases/vm3/virtuemart_update.xml', 1, 0, ''),
-(5, 'VirtueMart plg_vmpayment_standard Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmpayment_standard_update.xml', 1, 0, ''),
-(6, 'VirtueMart plg_vmpayment_klarna Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_klarna_update.xml', 1, 0, ''),
-(7, 'VirtueMart plg_vmpayment_klarnacheckout Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_klarnacheckout_update.xml', 1, 0, ''),
-(8, 'VirtueMart plg_vmpayment_sofort Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmpayment_sofort_update.xml', 1, 0, ''),
-(9, 'VirtueMart plg_vmpayment_paypal Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_paypal_update.xml', 1, 0, ''),
-(10, 'VirtueMart plg_vmpayment_heidelpay Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_heidelpay_update.xml', 1, 0, ''),
-(11, 'VirtueMart plg_vmpayment_paybox Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_paybox_update.xml', 1, 0, ''),
-(12, 'VirtueMart plg_vmpayment_realex_hpp_api Update Site', 'extension', 'VirtueMart plg_vmuserfield_realex Update Site', 1, 0, ''),
-(13, 'VirtueMart3 plg_vmpayment_skrill Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_skrill_update.xml', 1, 0, ''),
-(14, 'VirtueMart plg_vmpayment_authorizenet Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_authorisenet_update.xml', 1, 0, ''),
-(15, 'VirtueMart plg_vmpayment_sofort_ideal Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_sofort_ideal_update.xml', 1, 0, ''),
-(16, 'VirtueMart3 plg_vmshipment_weight_countries Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmshipment_weight_countries_update.xml', 1, 0, ''),
-(17, 'VirtueMart3 plg_vmcustom_textinput Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcustom_textinput_update.xml', 1, 0, ''),
-(18, 'VirtueMart3 plg_vmcustom_specification Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcustom_specification_update.xml', 1, 0, ''),
-(19, 'VirtueMart3 plg_vmcalculation_avalara Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcalculation_avalara_update.xml', 1, 0, ''),
-(20, 'VirtueMart3 plg_search_virtuemart Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_search_virtuemart_update.xml', 1, 0, ''),
-(21, 'VirtueMart3 MOD_VMENU Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_vmmenu_update.xml', 1, 0, ''),
-(22, 'VirtueMart3 mod_virtuemart_currencies Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_currencies_update.xml', 1, 0, ''),
-(23, 'VirtueMart3 mod_virtuemart_product Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_product_update.xml', 1, 0, ''),
-(24, 'VirtueMart3 mod_virtuemart_search Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_search_update.xml', 1, 0, ''),
-(25, 'VirtueMart3 mod_virtuemart_manufacturer Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_manufacturer_update.xml', 1, 0, ''),
-(26, 'VirtueMart3 mod_virtuemart_cart Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_cart_update.xml', 1, 0, ''),
-(27, 'VirtueMart3 mod_virtuemart_category Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_category_update.xml', 1, 0, ''),
-(28, 'VirtueMart3 AIO Update Site', 'extension', 'http://virtuemart.net/releases/vm3/virtuemart_aio_update.xml', 1, 0, '');
+(1, 'Joomla! Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1411167422, ''),
+(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1411167422, ''),
+(3, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1411167422, ''),
+(4, 'VirtueMart3 Update Site', 'extension', 'http://virtuemart.net/releases/vm3/virtuemart_update.xml', 1, 1411167422, ''),
+(5, 'VirtueMart plg_vmpayment_standard Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmpayment_standard_update.xml', 1, 1411167422, ''),
+(6, 'VirtueMart plg_vmpayment_klarna Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_klarna_update.xml', 1, 1411167422, ''),
+(7, 'VirtueMart plg_vmpayment_klarnacheckout Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_klarnacheckout_update.xml', 1, 1411167422, ''),
+(8, 'VirtueMart plg_vmpayment_sofort Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmpayment_sofort_update.xml', 1, 1411167422, ''),
+(9, 'VirtueMart plg_vmpayment_paypal Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_paypal_update.xml', 1, 1411167422, ''),
+(10, 'VirtueMart plg_vmpayment_heidelpay Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_heidelpay_update.xml', 1, 1411167422, ''),
+(11, 'VirtueMart plg_vmpayment_paybox Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_paybox_update.xml', 1, 1411167422, ''),
+(12, 'VirtueMart plg_vmpayment_realex_hpp_api Update Site', 'extension', 'VirtueMart plg_vmuserfield_realex Update Site', 0, 0, ''),
+(13, 'VirtueMart3 plg_vmpayment_skrill Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_skrill_update.xml', 0, 0, ''),
+(14, 'VirtueMart plg_vmpayment_authorizenet Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_authorisenet_update.xml', 1, 1411167422, ''),
+(15, 'VirtueMart plg_vmpayment_sofort_ideal Update Site', 'extension', '\n            http://virtuemart.net/releases/vm3/plg_vmpayment_sofort_ideal_update.xml', 1, 1411167422, ''),
+(16, 'VirtueMart3 plg_vmshipment_weight_countries Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmshipment_weight_countries_update.xml', 1, 1411167422, ''),
+(17, 'VirtueMart3 plg_vmcustom_textinput Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcustom_textinput_update.xml', 1, 1411167422, ''),
+(18, 'VirtueMart3 plg_vmcustom_specification Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcustom_specification_update.xml', 1, 1411167422, ''),
+(19, 'VirtueMart3 plg_vmcalculation_avalara Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_vmcalculation_avalara_update.xml', 1, 1411167422, ''),
+(20, 'VirtueMart3 plg_search_virtuemart Update Site', 'extension', 'http://virtuemart.net/releases/vm3/plg_search_virtuemart_update.xml', 1, 1411167422, ''),
+(21, 'VirtueMart3 MOD_VMENU Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_vmmenu_update.xml', 1, 1411167422, ''),
+(22, 'VirtueMart3 mod_virtuemart_currencies Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_currencies_update.xml', 1, 1411167422, ''),
+(23, 'VirtueMart3 mod_virtuemart_product Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_product_update.xml', 1, 1411167422, ''),
+(24, 'VirtueMart3 mod_virtuemart_search Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_search_update.xml', 1, 1411167422, ''),
+(25, 'VirtueMart3 mod_virtuemart_manufacturer Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_manufacturer_update.xml', 1, 1411167422, ''),
+(26, 'VirtueMart3 mod_virtuemart_cart Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_cart_update.xml', 1, 1411167422, ''),
+(27, 'VirtueMart3 mod_virtuemart_category Update Site', 'extension', 'http://virtuemart.net/releases/vm3/mod_virtuemart_category_update.xml', 1, 1411167422, ''),
+(28, 'VirtueMart3 AIO Update Site', 'extension', 'http://virtuemart.net/releases/vm3/virtuemart_aio_update.xml', 1, 1411167422, '');
 
 -- --------------------------------------------------------
 
@@ -1844,6 +1857,7 @@ INSERT INTO `nsmiv_update_sites_extensions` (`update_site_id`, `extension_id`) V
 (1, 700),
 (2, 700),
 (3, 600),
+(3, 10029),
 (4, 10000),
 (5, 10002),
 (6, 10003),
@@ -1931,7 +1945,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_users` (
 --
 
 INSERT INTO `nsmiv_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(718, 'Super User', 'lenard.latte', 'info@cms.ee', '$2y$10$FQo37A2OKQiourDXj/xAFu.ElwCAfNRE1KAg1EdHrMV7uhJ3ANuPy', 0, 1, '2014-09-19 19:29:14', '2014-09-19 19:46:41', '0', '', '0000-00-00 00:00:00', 0, '', '', 0);
+(718, 'Super User', 'lenard.latte', 'info@cms.ee', '$2y$10$FQo37A2OKQiourDXj/xAFu.ElwCAfNRE1KAg1EdHrMV7uhJ3ANuPy', 0, 1, '2014-09-19 19:29:14', '2014-09-19 19:46:41', '0', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2235,7 +2249,18 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_categories` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Product Categories are stored here' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Product Categories are stored here' AUTO_INCREMENT=6 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_categories`
+--
+
+INSERT INTO `nsmiv_virtuemart_categories` (`virtuemart_category_id`, `virtuemart_vendor_id`, `category_template`, `category_layout`, `category_product_layout`, `products_per_row`, `limit_list_step`, `limit_list_initial`, `hits`, `metarobot`, `metaauthor`, `ordering`, `shared`, `published`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 1, '0', '0', '0', 0, '0', 0, 0, '', '', 1, 0, 1, '2014-09-19 20:50:57', 718, '2014-09-19 22:07:32', 718, '0000-00-00 00:00:00', 0),
+(2, 1, '0', '0', '0', 0, '0', 0, 0, '', '', 2, 0, 1, '2014-09-19 20:53:50', 718, '2014-09-19 21:24:27', 718, '0000-00-00 00:00:00', 0),
+(3, 1, '0', '0', '0', 0, '0', 0, 0, '', '', 3, 0, 1, '2014-09-19 20:54:04', 718, '2014-09-19 22:07:46', 718, '0000-00-00 00:00:00', 0),
+(4, 1, '0', '0', '0', 0, '0', 0, 0, '', '', 4, 0, 1, '2014-09-19 20:54:17', 718, '2014-09-19 22:08:08', 718, '0000-00-00 00:00:00', 0),
+(5, 1, '0', '0', '0', 0, '0', 0, 0, '', '', 5, 0, 1, '2014-09-19 20:54:32', 718, '2014-09-19 22:07:16', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -2245,6 +2270,34 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_categories` (
 
 DROP TABLE IF EXISTS `nsmiv_virtuemart_categories_en_gb`;
 CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_categories_en_gb` (
+  `virtuemart_category_id` int(1) unsigned NOT NULL,
+  `category_name` char(180) NOT NULL DEFAULT '',
+  `category_description` varchar(19000) NOT NULL DEFAULT '',
+  `metadesc` varchar(400) NOT NULL DEFAULT '',
+  `metakey` varchar(400) NOT NULL DEFAULT '',
+  `customtitle` char(255) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_categories_en_gb`
+--
+
+INSERT INTO `nsmiv_virtuemart_categories_en_gb` (`virtuemart_category_id`, `category_name`, `category_description`, `metadesc`, `metakey`, `customtitle`, `slug`) VALUES
+(1, 'E-sigareti komplektid', '', '', '', '', 'e-sigareti-komplektid'),
+(2, 'Akud', '', '', '', '', 'akud'),
+(3, 'Kartomiseerijad', '', '', '', '', 'kartomiseerijad'),
+(4, 'Tarvikud', '', '', '', '', 'tarvikud'),
+(5, 'Allahinnatud', '', '', '', '', 'allahinnatud');
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_categories_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_categories_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_categories_et_ee` (
   `virtuemart_category_id` int(1) unsigned NOT NULL,
   `category_name` char(180) NOT NULL DEFAULT '',
   `category_description` varchar(19000) NOT NULL DEFAULT '',
@@ -2266,7 +2319,18 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_category_categories` (
   `category_parent_id` int(1) unsigned NOT NULL DEFAULT '0',
   `category_child_id` int(1) unsigned NOT NULL DEFAULT '0',
   `ordering` int(2) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Category child-parent relation list' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Category child-parent relation list' AUTO_INCREMENT=6 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_category_categories`
+--
+
+INSERT INTO `nsmiv_virtuemart_category_categories` (`id`, `category_parent_id`, `category_child_id`, `ordering`) VALUES
+(1, 0, 1, 5),
+(2, 0, 2, 0),
+(3, 0, 3, 3),
+(4, 0, 4, 4),
+(5, 0, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -2280,7 +2344,18 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_category_medias` (
   `virtuemart_category_id` mediumint(1) unsigned NOT NULL DEFAULT '0',
   `virtuemart_media_id` int(1) unsigned NOT NULL DEFAULT '0',
   `ordering` int(2) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_category_medias`
+--
+
+INSERT INTO `nsmiv_virtuemart_category_medias` (`id`, `virtuemart_category_id`, `virtuemart_media_id`, `ordering`) VALUES
+(1, 2, 2, 1),
+(2, 5, 3, 1),
+(3, 1, 4, 1),
+(4, 3, 5, 1),
+(5, 4, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -2305,7 +2380,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_configs` (
 --
 
 INSERT INTO `nsmiv_virtuemart_configs` (`virtuemart_config_id`, `config`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
-(1, 'shop_is_offline=s:1:"0";|offline_message=czo3MzoiT3VyIFNob3AgaXMgY3VycmVudGx5IGRvd24gZm9yIG1haW50ZW5hbmNlLiBQbGVhc2UgY2hlY2sgYmFjayBhZ2FpbiBzb29uLiI7|use_as_catalog=s:1:"0";|currency_converter_module=s:14:"convertECB.php";|order_mail_html=s:1:"1";|useSSL=s:1:"0";|useVendorEmail=s:1:"0";|dangeroustools=s:1:"0";|debug_enable=s:4:"none";|google_jquery=s:1:"0";|multix=s:4:"none";|usefancy=s:1:"1";|jchosen=s:1:"1";|enableEnglish=s:1:"1";|pdf_button_enable=s:1:"1";|show_emailfriend=s:1:"0";|show_printicon=s:1:"1";|show_out_of_stock_products=s:1:"1";|ask_captcha=s:1:"1";|coupons_enable=s:1:"1";|show_uncat_child_products=s:1:"0";|coupons_default_expire=s:3:"1,D";|weight_unit_default=s:2:"KG";|lwh_unit_default=s:1:"m";|list_limit=s:2:"30";|showReviewFor=s:3:"all";|reviewMode=s:6:"bought";|showRatingFor=s:3:"all";|ratingMode=s:6:"bought";|reviews_autopublish=s:1:"1";|reviews_minimum_comment_length=s:1:"0";|reviews_maximum_comment_length=s:4:"2000";|product_navigation=s:1:"1";|display_stock=s:1:"1";|vmtemplate=s:1:"0";|categorytemplate=s:1:"0";|showCategory=s:1:"1";|categorylayout=s:1:"0";|categories_per_row=s:1:"3";|productlayout=s:1:"0";|products_per_row=s:1:"3";|llimit_init_FE=s:2:"24";|vmlayout=s:1:"0";|show_store_desc=s:1:"1";|show_categories=s:1:"1";|homepage_categories_per_row=s:1:"3";|homepage_products_per_row=s:1:"3";|show_featured=s:1:"1";|featured_products_rows=s:1:"1";|show_topTen=s:1:"1";|topTen_products_rows=s:1:"1";|show_recent=s:1:"1";|recent_products_rows=s:1:"1";|show_latest=s:1:"1";|latest_products_rows=s:1:"1";|assets_general_path=s:33:"components/com_virtuemart/assets/";|media_category_path=s:35:"images/stories/virtuemart/category/";|media_product_path=s:34:"images/stories/virtuemart/product/";|media_manufacturer_path=s:39:"images/stories/virtuemart/manufacturer/";|media_vendor_path=s:33:"images/stories/virtuemart/vendor/";|forSale_path_thumb=s:42:"images/stories/virtuemart/forSale/resized/";|img_resize_enable=s:1:"1";|img_width=s:1:"0";|img_height=s:2:"90";|no_image_set=s:11:"noimage.gif";|no_image_found=s:11:"warning.png";|browse_orderby_field=s:11:"pc.ordering";|browse_cat_orderby_field=s:10:"c.ordering";|browse_orderby_fields=a:5:{i:0;s:15:"`p`.product_sku";i:1;s:13:"category_name";i:2;s:7:"mf_name";i:3;s:12:"product_name";i:4;s:11:"pc.ordering";}|browse_search_fields=a:7:{i:0;s:15:"`p`.product_sku";i:1;s:13:"category_name";i:2;s:20:"category_description";i:3;s:7:"mf_name";i:4;s:12:"product_name";i:5;s:14:"product_s_desc";i:6;s:12:"product_desc";}|askprice=s:1:"1";|roundindig=s:1:"1";|show_prices=s:1:"1";|price_show_packaging_pricelabel=s:1:"0";|show_tax=s:1:"1";|basePrice=s:1:"0";|basePriceText=s:1:"1";|basePriceRounding=s:2:"-1";|variantModification=s:1:"0";|variantModificationText=s:1:"1";|variantModificationRounding=s:2:"-1";|basePriceVariant=s:1:"1";|basePriceVariantText=s:1:"1";|basePriceVariantRounding=s:2:"-1";|basePriceWithTax=s:1:"0";|basePriceWithTaxText=s:1:"1";|basePriceWithTaxRounding=s:2:"-1";|discountedPriceWithoutTax=s:1:"1";|discountedPriceWithoutTaxText=s:1:"1";|discountedPriceWithoutTaxRounding=s:2:"-1";|salesPriceWithDiscount=s:1:"0";|salesPriceWithDiscountText=s:1:"1";|salesPriceWithDiscountRounding=s:2:"-1";|salesPrice=s:1:"1";|salesPriceText=s:1:"1";|salesPriceRounding=s:2:"-1";|priceWithoutTax=s:1:"1";|priceWithoutTaxText=s:1:"1";|priceWithoutTaxRounding=s:2:"-1";|discountAmount=s:1:"1";|discountAmountText=s:1:"1";|discountAmountRounding=s:2:"-1";|taxAmount=s:1:"1";|taxAmountText=s:1:"1";|taxAmountRounding=s:2:"-1";|unitPrice=s:1:"1";|unitPriceText=s:1:"1";|unitPriceRounding=s:2:"-1";|addtocart_popup=s:1:"1";|check_stock=s:1:"0";|automatic_payment=s:1:"1";|automatic_shipment=s:1:"1";|agree_to_tos_onorder=s:1:"0";|oncheckout_opc=s:1:"1";|oncheckout_show_legal_info=s:1:"1";|oncheckout_show_register=s:1:"1";|oncheckout_show_steps=s:1:"0";|oncheckout_show_register_text=s:47:"COM_VIRTUEMART_ONCHECKOUT_DEFAULT_TEXT_REGISTER";|inv_os=s:1:"C";|email_os_s=a:5:{i:0;s:1:"U";i:1;s:1:"C";i:2;s:1:"X";i:3;s:1:"R";i:4;s:1:"S";}|email_os_v=a:4:{i:0;s:1:"U";i:1;s:1:"C";i:2;s:1:"X";i:3;s:1:"R";}|seo_disabled=s:1:"0";|seo_translate=s:1:"0";|seo_use_id=s:1:"0";', '0000-00-00 00:00:00', 0, '2014-09-19 19:53:06', 718, '0000-00-00 00:00:00', 0);
+(1, 'shop_is_offline=s:1:"0";|offline_message=czo3MzoiT3VyIFNob3AgaXMgY3VycmVudGx5IGRvd24gZm9yIG1haW50ZW5hbmNlLiBQbGVhc2UgY2hlY2sgYmFjayBhZ2FpbiBzb29uLiI7|use_as_catalog=s:1:"0";|currency_converter_module=s:14:"convertECB.php";|order_mail_html=s:1:"1";|useSSL=s:1:"0";|useVendorEmail=s:1:"0";|dangeroustools=s:1:"0";|debug_enable=s:4:"none";|google_jquery=s:1:"0";|multix=s:4:"none";|usefancy=s:1:"1";|jchosen=s:1:"1";|enableEnglish=s:1:"1";|pdf_button_enable=s:1:"1";|show_emailfriend=s:1:"1";|show_printicon=s:1:"0";|show_out_of_stock_products=s:1:"1";|ask_captcha=s:1:"0";|coupons_enable=s:1:"0";|show_uncat_child_products=s:1:"0";|coupons_default_expire=s:3:"1,D";|weight_unit_default=s:2:"KG";|lwh_unit_default=s:1:"M";|list_limit=s:2:"30";|showReviewFor=s:4:"none";|reviewMode=s:4:"none";|showRatingFor=s:4:"none";|ratingMode=s:4:"none";|reviews_autopublish=s:1:"0";|reviews_minimum_comment_length=s:1:"0";|reviews_maximum_comment_length=s:4:"2000";|product_navigation=s:1:"1";|display_stock=s:1:"1";|vmtemplate=s:7:"default";|categorytemplate=s:7:"default";|showCategory=s:1:"1";|categorylayout=s:1:"0";|categories_per_row=s:1:"3";|productlayout=s:1:"0";|products_per_row=s:1:"3";|llimit_init_FE=s:2:"24";|vmlayout=s:1:"0";|show_store_desc=s:1:"0";|show_categories=s:1:"1";|homepage_categories_per_row=s:1:"3";|homepage_products_per_row=s:1:"3";|show_featured=s:1:"1";|featured_products_rows=s:1:"1";|show_topTen=s:1:"0";|topTen_products_rows=s:1:"1";|show_recent=s:1:"0";|recent_products_rows=s:1:"1";|show_latest=s:1:"1";|latest_products_rows=s:1:"1";|assets_general_path=s:33:"components/com_virtuemart/assets/";|media_category_path=s:35:"images/stories/virtuemart/category/";|media_product_path=s:34:"images/stories/virtuemart/product/";|media_manufacturer_path=s:39:"images/stories/virtuemart/manufacturer/";|media_vendor_path=s:33:"images/stories/virtuemart/vendor/";|forSale_path_thumb=s:42:"images/stories/virtuemart/forSale/resized/";|img_resize_enable=s:1:"1";|img_width=s:1:"0";|img_height=s:2:"90";|no_image_set=s:11:"noimage.gif";|no_image_found=s:11:"warning.png";|browse_orderby_field=s:11:"pc.ordering";|browse_cat_orderby_field=s:10:"c.ordering";|browse_orderby_fields=a:5:{i:0;s:12:"product_name";i:1;s:15:"`p`.product_sku";i:2;s:13:"category_name";i:3;s:7:"mf_name";i:4;s:11:"pc.ordering";}|browse_search_fields=a:7:{i:0;s:12:"product_name";i:1;s:15:"`p`.product_sku";i:2;s:14:"product_s_desc";i:3;s:12:"product_desc";i:4;s:13:"category_name";i:5;s:20:"category_description";i:6;s:7:"mf_name";}|askprice=s:1:"1";|roundindig=s:1:"1";|show_prices=s:1:"1";|price_show_packaging_pricelabel=s:1:"0";|show_tax=s:1:"1";|basePrice=s:1:"0";|basePriceText=s:1:"0";|basePriceRounding=s:2:"-1";|variantModification=s:1:"0";|variantModificationText=s:1:"0";|variantModificationRounding=s:2:"-1";|basePriceVariant=s:1:"0";|basePriceVariantText=s:1:"0";|basePriceVariantRounding=s:2:"-1";|basePriceWithTax=s:1:"0";|basePriceWithTaxText=s:1:"0";|basePriceWithTaxRounding=s:2:"-1";|discountedPriceWithoutTax=s:1:"0";|discountedPriceWithoutTaxText=s:1:"0";|discountedPriceWithoutTaxRounding=s:2:"-1";|salesPriceWithDiscount=s:1:"0";|salesPriceWithDiscountText=s:1:"0";|salesPriceWithDiscountRounding=s:2:"-1";|salesPrice=s:1:"1";|salesPriceText=s:1:"1";|salesPriceRounding=s:2:"-1";|priceWithoutTax=s:1:"0";|priceWithoutTaxText=s:1:"0";|priceWithoutTaxRounding=s:2:"-1";|discountAmount=s:1:"1";|discountAmountText=s:1:"1";|discountAmountRounding=s:2:"-1";|taxAmount=s:1:"0";|taxAmountText=s:1:"0";|taxAmountRounding=s:2:"-1";|unitPrice=s:1:"0";|unitPriceText=s:1:"0";|unitPriceRounding=s:2:"-1";|addtocart_popup=s:1:"1";|check_stock=s:1:"0";|automatic_payment=s:1:"1";|automatic_shipment=s:1:"1";|agree_to_tos_onorder=s:1:"0";|oncheckout_opc=s:1:"1";|oncheckout_show_legal_info=s:1:"1";|oncheckout_show_register=s:1:"1";|oncheckout_show_steps=s:1:"0";|oncheckout_show_register_text=s:47:"COM_VIRTUEMART_ONCHECKOUT_DEFAULT_TEXT_REGISTER";|inv_os=a:1:{i:0;s:1:"C";}|email_os_s=a:5:{i:0;s:1:"U";i:1;s:1:"C";i:2;s:1:"X";i:3;s:1:"R";i:4;s:1:"S";}|email_os_v=a:4:{i:0;s:1:"U";i:1;s:1:"C";i:2;s:1:"X";i:3;s:1:"R";}|seo_disabled=s:1:"0";|seo_translate=s:1:"0";|seo_use_id=s:1:"0";|enable_content_plugin=s:1:"0";|reg_captcha=s:1:"0";|active_languages=a:1:{i:0;s:5:"en-GB";}|multixcart=s:1:"0";|pdf_icon=s:1:"0";|recommend_unauth=s:1:"0";|ask_question=s:1:"0";|asks_minimum_comment_length=s:2:"50";|asks_maximum_comment_length=s:4:"2000";|show_pcustoms=s:1:"1";|handle_404=s:1:"1";|cp_rm=a:1:{i:0;s:1:"C";}|latest_products_days=s:1:"7";|latest_products_orderBy=s:10:"created_on";|lstockmail=s:1:"0";|stockhandle=s:4:"none";|rised_availability=s:0:"";|image=s:0:"";|rr_os=a:1:{i:0;s:1:"C";}|show_manufacturers=s:1:"0";|productsublayout=s:1:"0";|manufacturer_per_row=s:1:"3";|mediaLimit=s:2:"20";|llimit_init_BE=s:2:"30";|pagseq=s:0:"";|pagseq_1=s:0:"";|pagseq_2=s:0:"";|pagseq_3=s:0:"";|pagseq_4=s:0:"";|pagseq_5=s:0:"";|feed_cat_published=s:1:"0";|feed_cat_show_images=s:1:"0";|feed_cat_show_prices=s:1:"0";|feed_cat_show_description=s:1:"0";|feed_cat_description_type=s:14:"product_s_desc";|feed_cat_max_text_length=s:3:"500";|forSale_path=s:0:"";|add_img_main=s:1:"0";|feed_latest_published=s:1:"0";|feed_latest_nb=s:1:"5";|feed_topten_published=s:1:"0";|feed_topten_nb=s:1:"5";|feed_featured_published=s:1:"0";|feed_featured_nb=s:1:"5";|feed_home_show_images=s:1:"1";|feed_home_show_prices=s:1:"1";|feed_home_show_description=s:1:"0";|feed_home_description_type=s:14:"product_s_desc";|feed_home_max_text_length=s:3:"500";|css=s:1:"1";|jquery=s:1:"1";|jprice=s:1:"1";|jsite=s:1:"1";|rappenrundung=s:1:"0";|cVarswT=s:1:"1";|popup_rel=s:1:"1";|oncheckout_only_registered=s:1:"0";|oncheckout_show_images=s:1:"0";|vmlang_js=s:1:"1";|oncheckout_change_shopper=s:1:"1";|del_date_type=s:1:"m";|prd_brws_orderby_dir=s:3:"ASC";|cat_brws_orderby_dir=s:3:"ASC";|seo_sufix=s:7:"-detail";|task=s:5:"apply";|option=s:14:"com_virtuemart";|view=s:6:"config";|1f9b5cf255f5abe159b61ebb91b73b13=s:1:"1";', '0000-00-00 00:00:00', 0, '2014-09-19 22:32:25', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -2911,6 +2986,20 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_manufacturercategories_en_gb` (
 -- --------------------------------------------------------
 
 --
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_manufacturercategories_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_manufacturercategories_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_manufacturercategories_et_ee` (
+  `virtuemart_manufacturercategories_id` int(1) unsigned NOT NULL,
+  `mf_category_name` char(180) NOT NULL DEFAULT '',
+  `mf_category_desc` varchar(19000) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Tabeli struktuur tabelile `nsmiv_virtuemart_manufacturers`
 --
 
@@ -2936,6 +3025,22 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_manufacturers` (
 
 DROP TABLE IF EXISTS `nsmiv_virtuemart_manufacturers_en_gb`;
 CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_manufacturers_en_gb` (
+  `virtuemart_manufacturer_id` int(1) unsigned NOT NULL,
+  `mf_name` char(180) NOT NULL DEFAULT '',
+  `mf_email` char(255) NOT NULL DEFAULT '',
+  `mf_desc` varchar(19000) NOT NULL DEFAULT '',
+  `mf_url` char(255) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_manufacturers_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_manufacturers_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_manufacturers_et_ee` (
   `virtuemart_manufacturer_id` int(1) unsigned NOT NULL,
   `mf_name` char(180) NOT NULL DEFAULT '',
   `mf_email` char(255) NOT NULL DEFAULT '',
@@ -2988,7 +3093,19 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_medias` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Additional Images and Files which are assigned to products' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Additional Images and Files which are assigned to products' AUTO_INCREMENT=7 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_medias`
+--
+
+INSERT INTO `nsmiv_virtuemart_medias` (`virtuemart_media_id`, `virtuemart_vendor_id`, `file_title`, `file_description`, `file_meta`, `file_mimetype`, `file_type`, `file_url`, `file_url_thumb`, `file_is_product_image`, `file_is_downloadable`, `file_is_forSale`, `file_params`, `file_lang`, `shared`, `published`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 1, 'ego-stardikomplekt.jpg', '', '', 'image/jpeg', 'product', 'images/stories/virtuemart/product/ego-stardikomplekt.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 21:18:43', 718, '2014-09-19 22:33:21', 718, '0000-00-00 00:00:00', 0),
+(2, 1, 'akud.jpg', '', '', 'image/jpeg', 'category', 'images/stories/virtuemart/category/akud.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 21:21:39', 718, '2014-09-19 21:24:27', 718, '0000-00-00 00:00:00', 0),
+(3, 1, 'allahinnatud.jpg', '', '', 'image/jpeg', 'category', 'images/stories/virtuemart/category/allahinnatud.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 22:07:16', 718, '2014-09-19 22:07:16', 718, '0000-00-00 00:00:00', 0),
+(4, 1, 'komplektid.jpg', '', '', 'image/jpeg', 'category', 'images/stories/virtuemart/category/komplektid.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 22:07:32', 718, '2014-09-19 22:07:32', 718, '0000-00-00 00:00:00', 0),
+(5, 1, 'kartomiseeriad.jpg', '', '', 'image/jpeg', 'category', 'images/stories/virtuemart/category/kartomiseeriad.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 22:07:46', 718, '2014-09-19 22:07:46', 718, '0000-00-00 00:00:00', 0),
+(6, 1, 'tarvikud.jpg', '', '', 'image/jpeg', 'category', 'images/stories/virtuemart/category/tarvikud.jpg', '', 0, 0, 0, '', '', 0, 1, '2014-09-19 22:08:08', 718, '2014-09-19 22:08:08', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -3297,6 +3414,20 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_paymentmethods_en_gb` (
 -- --------------------------------------------------------
 
 --
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_paymentmethods_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_paymentmethods_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_paymentmethods_et_ee` (
+  `virtuemart_paymentmethod_id` int(1) unsigned NOT NULL,
+  `payment_name` char(180) NOT NULL DEFAULT '',
+  `payment_desc` varchar(19000) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Tabeli struktuur tabelile `nsmiv_virtuemart_paymentmethod_shoppergroups`
 --
 
@@ -3351,7 +3482,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_products` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='All products are stored here.' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='All products are stored here.' AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_products`
+--
+
+INSERT INTO `nsmiv_virtuemart_products` (`virtuemart_product_id`, `virtuemart_vendor_id`, `product_parent_id`, `product_sku`, `product_gtin`, `product_mpn`, `product_weight`, `product_weight_uom`, `product_length`, `product_width`, `product_height`, `product_lwh_uom`, `product_url`, `product_in_stock`, `product_ordered`, `low_stock_notification`, `product_available_date`, `product_availability`, `product_special`, `product_sales`, `product_unit`, `product_packaging`, `product_params`, `hits`, `intnotes`, `metarobot`, `metaauthor`, `layout`, `published`, `pordering`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 1, 0, '001', '', '', NULL, 'KG', NULL, NULL, NULL, 'M', '', 48, 0, 5, '2014-09-19 00:00:00', '', 0, 0, 'KG', NULL, 'min_order_level=""|max_order_level=""|step_order_level=""|product_box=""|', NULL, '', '', '', '0', 1, 0, '2014-09-19 21:15:42', 718, '2014-09-19 22:33:21', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -3361,6 +3499,31 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_products` (
 
 DROP TABLE IF EXISTS `nsmiv_virtuemart_products_en_gb`;
 CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_products_en_gb` (
+  `virtuemart_product_id` int(1) unsigned NOT NULL,
+  `product_s_desc` varchar(2000) NOT NULL DEFAULT '',
+  `product_desc` varchar(18400) NOT NULL DEFAULT '',
+  `product_name` char(180) NOT NULL DEFAULT '',
+  `metadesc` varchar(400) NOT NULL DEFAULT '',
+  `metakey` varchar(400) NOT NULL DEFAULT '',
+  `customtitle` char(255) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_products_en_gb`
+--
+
+INSERT INTO `nsmiv_virtuemart_products_en_gb` (`virtuemart_product_id`, `product_s_desc`, `product_desc`, `product_name`, `metadesc`, `metakey`, `customtitle`, `slug`) VALUES
+(1, 'Populaarne e-sigareti komplekt eGo stardikas', '<p style="padding: 0px; margin: 0.5em 0px; border: 0px; outline: #000000; font-family: Arvo; vertical-align: baseline; line-height: 18px; color: #7a7a7a;">Komplekti kuulub:</p><ul style="padding: 0px; margin: 0px 0px 0px 10px; border: 0px; outline: #000000; font-family: Arvo; vertical-align: baseline; list-style-type: square; color: #7a7a7a; line-height: 18px;"><li style="padding: 0px; margin: 0px 0px 0.4em; border: 0px; outline: #000000; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: circle; background: none;"><span style="padding: 0px; margin: 0px; border: 0px; outline: #000000; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; line-height: 1.5;">Kauakestev 1100mah aku</span></li><li style="padding: 0px; margin: 0px 0px 0.4em; border: 0px; outline: #000000; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: circle; background: none;"><span style="padding: 0px; margin: 0px; border: 0px; outline: #000000; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; line-height: 1.5;">Populaarne CE4 kartomiseerija</span></li><li style="padding: 0px; margin: 0px 0px 0.4em; border: 0px; outline: #000000; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: circle; background: none;">Laadija</li></ul>', 'eGo stardikomplekt', '', '', '', 'ego-stardikomplekt');
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_products_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_products_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_products_et_ee` (
   `virtuemart_product_id` int(1) unsigned NOT NULL,
   `product_s_desc` varchar(2000) NOT NULL DEFAULT '',
   `product_desc` varchar(18400) NOT NULL DEFAULT '',
@@ -3383,7 +3546,16 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_product_categories` (
   `virtuemart_product_id` int(1) unsigned NOT NULL DEFAULT '0',
   `virtuemart_category_id` mediumint(1) unsigned NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Maps Products to Categories' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Maps Products to Categories' AUTO_INCREMENT=4 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_product_categories`
+--
+
+INSERT INTO `nsmiv_virtuemart_product_categories` (`id`, `virtuemart_product_id`, `virtuemart_category_id`, `ordering`) VALUES
+(1, 1, 5, 0),
+(2, 1, 2, 0),
+(3, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3439,7 +3611,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_product_medias` (
   `virtuemart_product_id` int(1) unsigned NOT NULL DEFAULT '0',
   `virtuemart_media_id` int(1) unsigned NOT NULL DEFAULT '0',
   `ordering` int(2) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_product_medias`
+--
+
+INSERT INTO `nsmiv_virtuemart_product_medias` (`id`, `virtuemart_product_id`, `virtuemart_media_id`, `ordering`) VALUES
+(1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3468,7 +3647,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_product_prices` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Holds price records for a product' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Holds price records for a product' AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_product_prices`
+--
+
+INSERT INTO `nsmiv_virtuemart_product_prices` (`virtuemart_product_price_id`, `virtuemart_product_id`, `virtuemart_shoppergroup_id`, `product_price`, `override`, `product_override_price`, `product_tax_id`, `product_discount_id`, `product_currency`, `product_price_publish_up`, `product_price_publish_down`, `price_quantity_start`, `price_quantity_end`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 1, 0, '24.000000', 0, '0.00000', -1, -1, 47, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '2014-09-19 21:15:42', 718, '2014-09-19 22:33:21', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -3579,6 +3765,20 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_shipmentmethods` (
 
 DROP TABLE IF EXISTS `nsmiv_virtuemart_shipmentmethods_en_gb`;
 CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_shipmentmethods_en_gb` (
+  `virtuemart_shipmentmethod_id` int(1) unsigned NOT NULL,
+  `shipment_name` char(180) NOT NULL DEFAULT '',
+  `shipment_desc` varchar(19000) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_shipmentmethods_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_shipmentmethods_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_shipmentmethods_et_ee` (
   `virtuemart_shipmentmethod_id` int(1) unsigned NOT NULL,
   `shipment_name` char(180) NOT NULL DEFAULT '',
   `shipment_desc` varchar(19000) NOT NULL DEFAULT '',
@@ -4523,7 +4723,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_userinfos` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Customer Information, BT = BillTo and ST = ShipTo' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Customer Information, BT = BillTo and ST = ShipTo' AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_userinfos`
+--
+
+INSERT INTO `nsmiv_virtuemart_userinfos` (`virtuemart_userinfo_id`, `virtuemart_user_id`, `address_type`, `address_type_name`, `name`, `company`, `title`, `last_name`, `first_name`, `middle_name`, `phone_1`, `phone_2`, `fax`, `address_1`, `address_2`, `city`, `virtuemart_state_id`, `virtuemart_country_id`, `zip`, `agreed`, `tos`, `customer_note`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 718, 'BT', '', 'Super User', '', '', 'Lätte', 'Lenard', '', '', '', '', 'Võru 57a-2', '', 'Tartu', 0, 67, '50111', 1, 0, '', '2014-09-19 21:12:09', 718, '2014-09-19 22:05:51', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -4546,7 +4753,14 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_vendors` (
   `modified_by` int(11) NOT NULL DEFAULT '0',
   `locked_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `locked_by` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Vendors manage their products in your store' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Vendors manage their products in your store' AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_vendors`
+--
+
+INSERT INTO `nsmiv_virtuemart_vendors` (`virtuemart_vendor_id`, `vendor_name`, `vendor_currency`, `vendor_accepted_currencies`, `vendor_params`, `metarobot`, `metaauthor`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
+(1, 'E-sigaretipood', 47, '47', 'vendor_min_pov="1"|vendor_min_poq=1|vendor_freeshipment=0|vendor_address_format=""|vendor_date_format=""|vendor_letter_format="A4"|vendor_letter_orientation="P"|vendor_letter_margin_top="55"|vendor_letter_margin_left="25"|vendor_letter_margin_right="25"|vendor_letter_margin_bottom="25"|vendor_letter_margin_header="20"|vendor_letter_margin_footer="20"|vendor_letter_font="helvetica"|vendor_letter_font_size="8"|vendor_letter_header_font_size="7"|vendor_letter_footer_font_size="6"|vendor_letter_header="1"|vendor_letter_header_line="1"|vendor_letter_header_line_color="#000000"|vendor_letter_header_image="1"|vendor_letter_header_imagesize="60"|vendor_letter_header_cell_height_ratio="1"|vendor_letter_footer="1"|vendor_letter_footer_line="1"|vendor_letter_footer_line_color="#000000"|vendor_letter_footer_cell_height_ratio="1"|vendor_letter_add_tos="0"|vendor_letter_add_tos_newpage="1"|vendor_mail_width=640|vendor_mail_header=1|vendor_mail_tos=1|vendor_mail_logo=1|vendor_mail_logo_width=200|vendor_mail_font="helvetica"|vendor_mail_header_font_size=11|vendor_mail_font_size=12|vendor_mail_footer_font_size=10|', '', '', '0000-00-00 00:00:00', 0, '2014-09-19 22:05:51', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -4556,6 +4770,42 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_vendors` (
 
 DROP TABLE IF EXISTS `nsmiv_virtuemart_vendors_en_gb`;
 CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_vendors_en_gb` (
+  `virtuemart_vendor_id` int(1) unsigned NOT NULL,
+  `vendor_store_desc` text NOT NULL,
+  `vendor_terms_of_service` text NOT NULL,
+  `vendor_legal_info` text NOT NULL,
+  `vendor_letter_css` text NOT NULL,
+  `vendor_letter_header_html` varchar(8000) NOT NULL DEFAULT '<h1>{vm:vendorname}</h1><p>{vm:vendoraddress}</p>',
+  `vendor_letter_footer_html` varchar(8000) NOT NULL DEFAULT '<p>{vm:vendorlegalinfo}<br />Page {vm:pagenum}/{vm:pagecount}</p>',
+  `vendor_store_name` char(180) NOT NULL DEFAULT '',
+  `vendor_phone` char(26) NOT NULL DEFAULT '',
+  `vendor_url` char(255) NOT NULL DEFAULT '',
+  `metadesc` varchar(400) NOT NULL DEFAULT '',
+  `metakey` varchar(400) NOT NULL DEFAULT '',
+  `customtitle` char(255) NOT NULL DEFAULT '',
+  `vendor_invoice_free1` char(255) NOT NULL DEFAULT '',
+  `vendor_invoice_free2` char(255) NOT NULL DEFAULT '',
+  `vendor_mail_free1` char(255) NOT NULL DEFAULT '',
+  `vendor_mail_free2` char(255) NOT NULL DEFAULT '',
+  `vendor_mail_css` char(255) NOT NULL DEFAULT '',
+  `slug` char(192) NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Andmete tõmmistamine tabelile `nsmiv_virtuemart_vendors_en_gb`
+--
+
+INSERT INTO `nsmiv_virtuemart_vendors_en_gb` (`virtuemart_vendor_id`, `vendor_store_desc`, `vendor_terms_of_service`, `vendor_legal_info`, `vendor_letter_css`, `vendor_letter_header_html`, `vendor_letter_footer_html`, `vendor_store_name`, `vendor_phone`, `vendor_url`, `metadesc`, `metakey`, `customtitle`, `vendor_invoice_free1`, `vendor_invoice_free2`, `vendor_mail_free1`, `vendor_mail_free2`, `vendor_mail_css`, `slug`) VALUES
+(1, '', '<p>s</p>', '', '', '<p>s</p>', '<p>s</p>', 'E-sigaretipood', '', '', '', '', '', '', '', '', '', '', 'e-sigaretipood');
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `nsmiv_virtuemart_vendors_et_ee`
+--
+
+DROP TABLE IF EXISTS `nsmiv_virtuemart_vendors_et_ee`;
+CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_vendors_et_ee` (
   `virtuemart_vendor_id` int(1) unsigned NOT NULL,
   `vendor_store_desc` text NOT NULL,
   `vendor_terms_of_service` text NOT NULL,
@@ -4619,7 +4869,7 @@ CREATE TABLE IF NOT EXISTS `nsmiv_virtuemart_vmusers` (
 --
 
 INSERT INTO `nsmiv_virtuemart_vmusers` (`virtuemart_user_id`, `virtuemart_vendor_id`, `user_is_vendor`, `customer_number`, `virtuemart_paymentmethod_id`, `virtuemart_shipmentmethod_id`, `agreed`, `created_on`, `created_by`, `modified_on`, `modified_by`, `locked_on`, `locked_by`) VALUES
-(718, 1, 1, NULL, NULL, NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
+(718, 1, 1, 'LEce902975f', NULL, NULL, 1, '2014-09-19 21:07:21', 718, '2014-09-19 22:05:51', 718, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -5182,6 +5432,12 @@ ALTER TABLE `nsmiv_virtuemart_categories_en_gb`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
+-- Indeksid tabelile `nsmiv_virtuemart_categories_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_categories_et_ee`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indeksid tabelile `nsmiv_virtuemart_category_categories`
 --
 ALTER TABLE `nsmiv_virtuemart_category_categories`
@@ -5242,6 +5498,12 @@ ALTER TABLE `nsmiv_virtuemart_manufacturercategories_en_gb`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
+-- Indeksid tabelile `nsmiv_virtuemart_manufacturercategories_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_manufacturercategories_et_ee`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indeksid tabelile `nsmiv_virtuemart_manufacturers`
 --
 ALTER TABLE `nsmiv_virtuemart_manufacturers`
@@ -5251,6 +5513,12 @@ ALTER TABLE `nsmiv_virtuemart_manufacturers`
 -- Indeksid tabelile `nsmiv_virtuemart_manufacturers_en_gb`
 --
 ALTER TABLE `nsmiv_virtuemart_manufacturers_en_gb`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
+-- Indeksid tabelile `nsmiv_virtuemart_manufacturers_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_manufacturers_et_ee`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
@@ -5326,6 +5594,12 @@ ALTER TABLE `nsmiv_virtuemart_paymentmethods_en_gb`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
+-- Indeksid tabelile `nsmiv_virtuemart_paymentmethods_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_paymentmethods_et_ee`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indeksid tabelile `nsmiv_virtuemart_paymentmethod_shoppergroups`
 --
 ALTER TABLE `nsmiv_virtuemart_paymentmethod_shoppergroups`
@@ -5341,6 +5615,12 @@ ALTER TABLE `nsmiv_virtuemart_products`
 -- Indeksid tabelile `nsmiv_virtuemart_products_en_gb`
 --
 ALTER TABLE `nsmiv_virtuemart_products_en_gb`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
+-- Indeksid tabelile `nsmiv_virtuemart_products_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_products_et_ee`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
@@ -5410,6 +5690,12 @@ ALTER TABLE `nsmiv_virtuemart_shipmentmethods_en_gb`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
+-- Indeksid tabelile `nsmiv_virtuemart_shipmentmethods_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_shipmentmethods_et_ee`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indeksid tabelile `nsmiv_virtuemart_shipmentmethod_shoppergroups`
 --
 ALTER TABLE `nsmiv_virtuemart_shipmentmethod_shoppergroups`
@@ -5458,6 +5744,12 @@ ALTER TABLE `nsmiv_virtuemart_vendors_en_gb`
  ADD UNIQUE KEY `slug` (`slug`);
 
 --
+-- Indeksid tabelile `nsmiv_virtuemart_vendors_et_ee`
+--
+ALTER TABLE `nsmiv_virtuemart_vendors_et_ee`
+ ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indeksid tabelile `nsmiv_virtuemart_vendor_medias`
 --
 ALTER TABLE `nsmiv_virtuemart_vendor_medias`
@@ -5501,7 +5793,7 @@ ALTER TABLE `nsmiv_weblinks`
 -- AUTO_INCREMENT tabelile `nsmiv_assets`
 --
 ALTER TABLE `nsmiv_assets`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=63;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_banners`
 --
@@ -5536,7 +5828,7 @@ MODIFY `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10000;
 -- AUTO_INCREMENT tabelile `nsmiv_extensions`
 --
 ALTER TABLE `nsmiv_extensions`
-MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10026;
+MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10031;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_finder_filters`
 --
@@ -5571,12 +5863,12 @@ MODIFY `lang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT tabelile `nsmiv_menu`
 --
 ALTER TABLE `nsmiv_menu`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=115;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=121;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_menu_types`
 --
 ALTER TABLE `nsmiv_menu_types`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_messages`
 --
@@ -5586,7 +5878,7 @@ MODIFY `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_modules`
 --
 ALTER TABLE `nsmiv_modules`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=95;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_newsfeeds`
 --
@@ -5616,7 +5908,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT tabelile `nsmiv_template_styles`
 --
 ALTER TABLE `nsmiv_template_styles`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_ucm_content`
 --
@@ -5631,7 +5923,7 @@ MODIFY `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_updates`
 --
 ALTER TABLE `nsmiv_updates`
-MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
+MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_update_sites`
 --
@@ -5706,17 +5998,17 @@ MODIFY `virtuemart_cart_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_categories`
 --
 ALTER TABLE `nsmiv_virtuemart_categories`
-MODIFY `virtuemart_category_id` mediumint(1) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_category_id` mediumint(1) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_category_categories`
 --
 ALTER TABLE `nsmiv_virtuemart_category_categories`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_category_medias`
 --
 ALTER TABLE `nsmiv_virtuemart_category_medias`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_configs`
 --
@@ -5766,7 +6058,7 @@ MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_medias`
 --
 ALTER TABLE `nsmiv_virtuemart_medias`
-MODIFY `virtuemart_media_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_media_id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_migration_oldtonew_ids`
 --
@@ -5821,12 +6113,12 @@ MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_products`
 --
 ALTER TABLE `nsmiv_virtuemart_products`
-MODIFY `virtuemart_product_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_product_id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_product_categories`
 --
 ALTER TABLE `nsmiv_virtuemart_product_categories`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_product_customfields`
 --
@@ -5841,12 +6133,12 @@ MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_product_medias`
 --
 ALTER TABLE `nsmiv_virtuemart_product_medias`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_product_prices`
 --
 ALTER TABLE `nsmiv_virtuemart_product_prices`
-MODIFY `virtuemart_product_price_id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_product_price_id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_product_shoppergroups`
 --
@@ -5901,12 +6193,12 @@ MODIFY `virtuemart_userfield_value_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_userinfos`
 --
 ALTER TABLE `nsmiv_virtuemart_userinfos`
-MODIFY `virtuemart_userinfo_id` int(1) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_userinfo_id` int(1) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_vendors`
 --
 ALTER TABLE `nsmiv_virtuemart_vendors`
-MODIFY `virtuemart_vendor_id` smallint(1) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `virtuemart_vendor_id` smallint(1) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabelile `nsmiv_virtuemart_vendor_medias`
 --

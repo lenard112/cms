@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="2.5">
+    <name>com_virtuemart - et-EE</name>
+    <version>2014-09-19-03-45-23</version>
+    <creationDate>19.09.2014</creationDate>
+    <author>VirtueMart language team</author>
+    <authorEmail>max@virtuemart.net</authorEmail>
+    <authorUrl>https://virtuemart.net</authorUrl>
+    <copyright>© 2008-2014 - compojoom-com. All rights reserved!</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <packager>CTransifex</packager>
+    <packagerurl>https://compojoom.com</packagerurl>
+    <description>
+        <![CDATA[This package was auto generated with CTransifex(https://compojoom.com). We've grabbed the latest language files for our extension from transifex.com.
+        Special thanks to our translation team at (https://www.transifex.com/projects/p/virtuemart/) for helping with this VirtueMart translation!]]>
+    </description>
+    <fileset>
+        <files folder="admin" target="administrator/language/et-EE"><filename>et-EE.com_virtuemart.ini</filename>
+<filename>et-EE.com_virtuemart.sys.ini</filename>
+<filename>et-EE.com_virtuemart_config.ini</filename>
+<filename>et-EE.com_virtuemart_countries.ini</filename>
+<filename>et-EE.com_virtuemart_help.ini</filename>
+<filename>et-EE.com_virtuemart_log.ini</filename>
+<filename>et-EE.com_virtuemart_media.ini</filename>
+<filename>et-EE.mod_vmmenu.ini</filename>
+<filename>et-EE.mod_vmmenu.sys.ini</filename>
+<filename>et-EE.plg_search_virtuemart.ini</filename>
+<filename>et-EE.plg_vmcustom_specification.ini</filename>
+<filename>et-EE.plg_vmcustom_specification.sys.ini</filename>
+<filename>et-EE.plg_vmcustom_stockable.ini</filename>
+<filename>et-EE.plg_vmcustom_stockable.sys.ini</filename>
+<filename>et-EE.plg_vmcustom_textinput.ini</filename>
+<filename>et-EE.plg_vmcustom_textinput.sys.ini</filename>
+<filename>et-EE.plg_vmpayment_standard.ini</filename>
+<filename>et-EE.plg_vmpayment_standard.sys.ini</filename>
+<filename>et-EE.plg_vmshipment_weight_countries.ini</filename>
+<filename>et-EE.plg_vmshipment_weight_countries.sys.ini</filename></files>
+        <files folder="frontend" target="language/et-EE"><filename>et-EE.com_virtuemart.ini</filename>
+<filename>et-EE.com_virtuemart.sef.ini</filename>
+<filename>et-EE.com_virtuemart.sys.ini</filename>
+<filename>et-EE.com_virtuemart_orders.ini</filename>
+<filename>et-EE.com_virtuemart_shoppers.ini</filename>
+<filename>et-EE.liveupdate.ini</filename>
+<filename>et-EE.mod_virtuemart_cart.ini</filename>
+<filename>et-EE.mod_virtuemart_cart.sys.ini</filename>
+<filename>et-EE.mod_virtuemart_category.ini</filename>
+<filename>et-EE.mod_virtuemart_category.sys.ini</filename>
+<filename>et-EE.mod_virtuemart_currencies.ini</filename>
+<filename>et-EE.mod_virtuemart_currencies.sys.ini</filename>
+<filename>et-EE.mod_virtuemart_manufacturer.ini</filename>
+<filename>et-EE.mod_virtuemart_manufacturer.sys.ini</filename>
+<filename>et-EE.mod_virtuemart_product.ini</filename>
+<filename>et-EE.mod_virtuemart_product.sys.ini</filename>
+<filename>et-EE.mod_virtuemart_search.ini</filename>
+<filename>et-EE.mod_virtuemart_search.sys.ini</filename></files>
+    </fileset>
+</extension>

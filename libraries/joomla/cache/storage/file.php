@@ -9,6 +9,8 @@
 
 defined('JPATH_PLATFORM') or die;
 
+jimport('joomla.filesystem.file');
+
 /**
  * File cache storage handler
  *
@@ -19,8 +21,6 @@ defined('JPATH_PLATFORM') or die;
 class JCacheStorageFile extends JCacheStorage
 {
 	/**
-	 * Root path
-	 *
 	 * @var    string
 	 * @since  11.1
 	 */
@@ -95,6 +95,7 @@ class JCacheStorageFile extends JCacheStorage
 
 		foreach ($folders as $folder)
 		{
+			$files = array();
 			$files = $this->_filesInFolder($path . '/' . $folder);
 			$item = new JCacheStorageHelper($folder);
 
@@ -223,8 +224,7 @@ class JCacheStorageFile extends JCacheStorage
 	public function gc()
 	{
 		$result = true;
-
-		// Files older than lifeTime get deleted from cache
+		// files older than lifeTime get deleted from cache
 		$files = $this->_filesInFolder($this->_root, '', true, true, array('.svn', 'CVS', '.DS_Store', '__MACOSX', 'index.html'));
 		foreach ($files as $file)
 		{
@@ -242,9 +242,9 @@ class JCacheStorageFile extends JCacheStorage
 	 *
 	 * @return  boolean  True on success, false otherwise.
 	 *
-	 * @since   12.1
+	 * @since   11.1
 	 */
-	public static function isSupported()
+	public static function test()
 	{
 		$conf = JFactory::getConfig();
 		return is_writable($conf->get('cache_path', JPATH_CACHE));
@@ -269,7 +269,11 @@ class JCacheStorageFile extends JCacheStorage
 		$looptime = $locktime * 10;
 		$path = $this->_getFilePath($id, $group);
 
-		$_fileopen = @fopen($path, "r+b");
+		if(file_exists($path)){
+			$_fileopen = @fopen($path, "r+b");
+		} else {
+			$_fileopen = false;
+		}
 
 		if ($_fileopen)
 		{
@@ -285,8 +289,7 @@ class JCacheStorageFile extends JCacheStorage
 
 			$lock_counter = 0;
 
-			// Loop until you find that the lock has been released.
-			// That implies that data get from other thread has finished
+			// loop until you find that the lock has been released.  that implies that data get from other thread has finished
 			while ($data_lock === false)
 			{
 
@@ -347,7 +350,7 @@ class JCacheStorageFile extends JCacheStorage
 	{
 		$path = $this->_getFilePath($id, $group);
 
-		// Check prune period
+		// check prune period
 		if (file_exists($path))
 		{
 			$time = @filemtime($path);
@@ -407,8 +410,8 @@ class JCacheStorageFile extends JCacheStorage
 		// Sanity check
 		if (!$path || !is_dir($path) || empty($this->_root))
 		{
-			// Bad programmer! Bad, bad programmer!
-			JLog::add('JCacheStorageFile::_deleteFolder ' . JText::_('JLIB_FILESYSTEM_ERROR_DELETE_BASE_DIRECTORY'), JLog::WARNING, 'jerror');
+			// Bad programmer! Bad Bad programmer!
+			JError::raiseWarning(500, 'JCacheStorageFile::_deleteFolder ' . JText::_('JLIB_FILESYSTEM_ERROR_DELETE_BASE_DIRECTORY'));
 			return false;
 		}
 
@@ -419,7 +422,7 @@ class JCacheStorageFile extends JCacheStorage
 
 		if ($pos === false || $pos > 0)
 		{
-			JLog::add('JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path), JLog::WARNING, 'jerror');
+			JError::raiseWarning(500, 'JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path));
 			return false;
 		}
 
@@ -449,7 +452,7 @@ class JCacheStorageFile extends JCacheStorage
 				else
 				{
 					$filename = basename($file);
-					JLog::add('JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_DELETE_FAILED', $filename), JLog::WARNING, 'jerror');
+					JError::raiseWarning('SOME_ERROR_CODE', 'JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_DELETE_FAILED', $filename));
 					return false;
 				}
 			}
@@ -482,7 +485,7 @@ class JCacheStorageFile extends JCacheStorage
 		}
 		else
 		{
-			JLog::add('JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_FOLDER_DELETE', $path), JLog::WARNING, 'jerror');
+			JError::raiseWarning('SOME_ERROR_CODE', 'JCacheStorageFile::_deleteFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_FOLDER_DELETE', $path));
 			$ret = false;
 		}
 		return $ret;
@@ -534,6 +537,7 @@ class JCacheStorageFile extends JCacheStorage
 	protected function _filesInFolder($path, $filter = '.', $recurse = false, $fullpath = false
 		, $exclude = array('.svn', 'CVS', '.DS_Store', '__MACOSX'), $excludefilter = array('^\..*', '.*~'))
 	{
+		// Initialise variables.
 		$arr = array();
 
 		// Check to make sure the path valid and clean
@@ -542,7 +546,7 @@ class JCacheStorageFile extends JCacheStorage
 		// Is the path a folder?
 		if (!is_dir($path))
 		{
-			JLog::add('JCacheStorageFile::_filesInFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path), JLog::WARNING, 'jerror');
+			JError::raiseWarning(21, 'JCacheStorageFile::_filesInFolder' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path));
 			return false;
 		}
 
@@ -570,7 +574,7 @@ class JCacheStorageFile extends JCacheStorage
 				{
 					if ($recurse)
 					{
-						if (is_int($recurse))
+						if (is_integer($recurse))
 						{
 							$arr2 = $this->_filesInFolder($dir, $filter, $recurse - 1, $fullpath);
 						}
@@ -620,6 +624,7 @@ class JCacheStorageFile extends JCacheStorage
 	protected function _folders($path, $filter = '.', $recurse = false, $fullpath = false
 		, $exclude = array('.svn', 'CVS', '.DS_Store', '__MACOSX'), $excludefilter = array('^\..*'))
 	{
+		// Initialise variables.
 		$arr = array();
 
 		// Check to make sure the path valid and clean
@@ -628,11 +633,11 @@ class JCacheStorageFile extends JCacheStorage
 		// Is the path a folder?
 		if (!is_dir($path))
 		{
-			JLog::add('JCacheStorageFile::_folders' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path), JLog::WARNING, 'jerror');
+			JError::raiseWarning(21, 'JCacheStorageFile::_folders' . JText::sprintf('JLIB_FILESYSTEM_ERROR_PATH_IS_NOT_A_FOLDER', $path));
 			return false;
 		}
 
-		// Read the source directory
+		// read the source directory
 		if (!($handle = @opendir($path)))
 		{
 			return $arr;
@@ -670,7 +675,7 @@ class JCacheStorageFile extends JCacheStorage
 					}
 					if ($recurse)
 					{
-						if (is_int($recurse))
+						if (is_integer($recurse))
 						{
 							$arr2 = $this->_folders($dir, $filter, $recurse - 1, $fullpath, $exclude, $excludefilter);
 						}
